@@ -17,14 +17,24 @@
                 <img src="{% static 'media/logo.png' %}" alt="logo" class='logo'>
             </div>
             <div class='col-3'>
+                {% comment %} кнопка {% endcomment %}
                 <button class='header_button'>Заказать звонок</button>
             </div>
             <div class='col-3'>
-                <p>+7 964 650 03 02 </p>
-                <p>900-302</p>
+                <div class="d-flex align-items-center contact-block">
+                    <img src="{% static "media/phone.png" %}" alt="" class="contact_icon_phone">
+                    <div>
+                        <p class="contacts">+7 964 650 03 02</p>
+                        <p class="contacts">900-302</p>
+                    </div>
+                </div>
             </div>
             <div class='col-3'>
-                
+                {% comment %} иконки в строку{% endcomment %}
+                <a href="#"><img src="{% static 'media/telegram.svg' %}" alt="" class='contact_icon'></a> 
+                <a href="#"><img src="{% static 'media/whatsapp.svg' %}" alt="" class='contact_icon'></a>
+                <a href="#"><img src="{% static 'media/max.svg' %}" alt="" class='contact_icon'></a>
+
             </div>
         </div>
     </div>
