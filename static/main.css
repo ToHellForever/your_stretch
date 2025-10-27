@@ -199,3 +199,60 @@ p1 {
     color: #FFFFFF;
     margin: 0;
 }
+
+
+
+/* Стили для формы заявки */
+/* текст в форме */
+.text-in-form {
+    text-align: left;
+    margin-bottom: 30px;
+}
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2vw;
+    color: white;
+}
+p2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.2vw;
+    color: white;
+}
+.request-form {
+    background: rgba(55, 139, 197, 1);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: -3px 5px 12.1px rgba(0, 0, 0, 0.25);
+}
+
+.form-control, .form-select {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1vw;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    margin-top: 5px;
+}
+/* для placeholder */
+.form-control::placeholder {
+    opacity: 0.5;
+}
+
+.submit-button {
+    background: rgba(255, 204, 130, 1);
+    border: none;
+    color: rgba(38, 35, 35, 1);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.2vw;
+    padding: 10px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+.submit-button:hover {
+    background: rgba(255, 204, 130, 1);
+    color: rgba(38, 35, 35, 1);
+}
