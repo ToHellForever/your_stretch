@@ -50,22 +50,45 @@
 
 .img-carousel {
     width: 100%;
-    height: 130% !important;
+    height: 100%;
 }
+
+/* Стили для слайдов карусели */
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80% !important;
+  position: relative;
+}
+
 /* Увеличиваем центральный слайд */
 .swiper-slide-active {
-  transform: scale(1.1);
+  transform: scale(1.2);
   z-index: 10;
 }
 
-/* Эффект анимации масштабирования */
-.swiper-slide {
-  transition: all 0.3s ease;
+/* Навигационные кнопки внутри слайда */
+.swiper-slide-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 20;
 }
-
-/* Кнопки навигации */
-.swiper-button-prev,
-.swiper-button-next {
-  color: #000;
-  font-weight: bold;
+.swiper-slide-next, 
+.swiper-slide-prev {
+  cursor: pointer;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-slide-next {
+    transform: rotate(180deg);
 }
