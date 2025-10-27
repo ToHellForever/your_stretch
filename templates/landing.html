@@ -108,12 +108,20 @@
 
 
 {% comment %} блок с стоимостью услуг {% endcomment %}
-<div class='container'>
-  
+<div class='container mt-5'>
+  <h1>СТОИМОСТЬ УСЛУГ</h1>
   <div class='row'>
-    <div class='col-4'>
-
-    </div>
+    {% for product in products %}
+      <div class='col-md-4 mb-4'>
+        <div class='card product-card'>
+          <img src="{{ product.image.url }}" class='card-img-top product-image' alt="{{ product.title }}">
+          <div class='card-body'>
+            <h5 class='card-title product-title'>{{ product.title }}</h5>
+            <p class='card-text product-price'>{{ product.price }} руб./м²</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </div>
 

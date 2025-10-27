@@ -100,6 +100,7 @@ h1 {
     text-align: center;
     color:rgba(41, 37, 73, 1);
 }
+
 /* для колонок */
 .col-4 {
     margin-top: 40px;
@@ -129,3 +130,42 @@ p1 {
     font-weight: 400;
     font-size: 1vw;
 }
+
+
+
+/* для блок Стоимость услуг */
+/* Стили для карточек товаров */
+.product-card {
+    border: none;
+    background: #F4F9FB;
+    border-radius: 25px;
+    box-shadow: -3px 5px 12.1px rgba(0, 0, 0, 0.25);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image {
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+.product-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.product-price {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #378BC5;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+
