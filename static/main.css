@@ -43,14 +43,10 @@
 }
 
 
-
-
-
-
-
+/* БЛОК С КАРУСЕЛЬЮ */
+/* банеры в карусели */
 .img-carousel {
     width: 100%;
-    height: 100%;
 }
 
 /* Стили для слайдов карусели */
@@ -59,11 +55,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80% !important;
   position: relative;
 }
 
-/* Увеличиваем центральный слайд */
+/* Увеличиваем центральный слайд (пока не работает)*/
 .swiper-slide-active {
   transform: scale(1.2);
   z-index: 10;
@@ -79,6 +74,7 @@
   padding: 0 20px;
   z-index: 20;
 }
+/* сами кнопки навигации */
 .swiper-slide-next, 
 .swiper-slide-prev {
   cursor: pointer;
@@ -89,6 +85,44 @@
   align-items: center;
   justify-content: center;
 }
+/* разворот кнопки next */
 .swiper-slide-next {
     transform: rotate(180deg);
+}
+
+
+/* BLOCK1 С 5 ИКОНКАМИ */
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 2.5vw;
+    text-align: center;
+    color:rgba(41, 37, 73, 1);
+}
+/* для колонок */
+.col-4 {
+    margin-top: 40px;
+    text-align: left;
+}
+/* для иконок в блоке */
+.icon-block1 {
+    margin-top: 30px;
+    width: 6vw;
+    height: 6vw;
+}
+/* для заголовков в блоке */
+p {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5vw;
+    margin: 0;
+    margin-top: 20px;
+}
+/* для текста в блоке */
+p1 {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3vw;
 }
