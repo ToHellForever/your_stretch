@@ -136,36 +136,66 @@ p1 {
 /* для блок Стоимость услуг */
 /* Стили для карточек товаров */
 .product-card {
-    border: none;
-    background: #F4F9FB;
-    border-radius: 25px;
-    box-shadow: -3px 5px 12.1px rgba(0, 0, 0, 0.25);
+    width: 90%;
     height: 100%;
+    background: #F4F9FB;
+    box-shadow: -3px 5px 12.1px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 .product-image {
-    margin: 0 auto;
-    border-radius: 25px;
+    width: 16vw;
+    height: 10vw;
+    margin-top: 10px;
+    border-radius: 13px;
+    object-fit: cover;
 }
 
 .product-title {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 2vw;
+    line-height: 120%;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .product-price {
     font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #378BC5;
+    font-weight: 300;
+    font-size: 1.3vw;
+    color: #000000;
     text-align: center;
-    margin-bottom: 0;
+    margin: 10px 0;
 }
 
-
-
+.product-button {
+    width: 10vw;
+    height: 2.5vw;
+    background: #378BC5;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.product-button:hover {
+    background: #2C6FAB;
+    color: #FFFFFF;
+    /* плавное увеличение размера*/
+    transition: all 0.3s ease-in-out;
+}
+.product-button-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1vw;
+    color: #FFFFFF;
+    margin: 0;
+}
