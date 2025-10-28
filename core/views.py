@@ -8,8 +8,8 @@ class LandingView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['banners'] = Banner.objects.all()
         context['products'] = Product.objects.all()
         context['profiles'] = Profile.objects.all()
         context['galleries'] = Gallery.objects.prefetch_related('images').all()
-        context['banners'] = Banner.objects.all()  # добавляем баннеры в контекст
         return context
