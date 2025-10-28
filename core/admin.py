@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Profile, Gallery, GalleryImage
+from .models import Product, Profile, Gallery, GalleryImage, Banner
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
@@ -22,3 +22,7 @@ class GalleryAdmin(admin.ModelAdmin):
     inlines = [GalleryImageInline]
     list_display = ('id', 'name')
     search_fields = ('name',)
+
+@admin.register(Banner)
+class BannerAdmin(admin.ModelAdmin):
+    list_display = ('id','image')
