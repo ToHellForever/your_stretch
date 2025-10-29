@@ -150,34 +150,48 @@
     </div>
     <div class='row'>
       <div class='col-md-12 text-center'>
-        <button type='submit' class='btn btn-primary submit-button'>Отправить заявку</button>
+        <button type='submit' class='btn btn-primary submit-button'>Отправить на расчет</button>
       </div>
     </div>
   </form>
 </div>
 
 
-{% comment %} блок с примерами выполненных работ {% endcomment %}
 <div class="container mt-5">
   <h1>ПРИМЕРЫ РАБОТ</h1>
   <div class="row mt-3">
     {% for work in profiles %}
-      <div class="col-md-4 col-sm-6 col-xs-12 mb-4 d-flex">
-      <div class='product-card'>
+    <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
+      <div class='work-card'>
         <img src="{{ work.image.url }}" class='work-image' alt="{{ work.title }}">
+        <div class="work-details-container">
+          
+          <div class="work-details">
           <h3 class="work-name mt-3">{{ work.name }}</h3>
-          <ul class="list-unstyled work-details">
-            <li>Площадь: {{ work.area }} м²</li>
+            <div class="detail-row">
+              <span class="detail-label">Площадь:</span>
+              <span class="detail-value">{{ work.area|floatformat:0 }} м²</span>
+            </div>
             <hr>
-            <li>Кол-во углов: {{ work.angles }}</li>
+            <div class="detail-row">
+              <span class="detail-label">Кол-во углов:</span>
+              <span class="detail-value">{{ work.angles }} шт.</span>
+            </div>
             <hr>
-            <li>Профиль: {{ work.profile }}</li>
+            <div class="detail-row">
+              <span class="detail-label">Профиль:</span>
+              <span class="detail-value">{{ work.profile }}</span>
+            </div>
             <hr>
-            <li>Цена: {{ work.price|floatformat:0 }} руб./м²</li>
-          </ul>
-          <a href="#" class="btn btn-primary mt-3">Заказать замер</a>
+            <div class="detail-row">
+              <span class="detail-label price-value">Цена:</span>
+              <span class="detail-value price-value">{{ work.price|floatformat:0 }} руб./м²</span>
+            </div>
+          </div>
         </div>
+        <a href="#" class="btn btn-primary mt-3">Заказать замер</a>
       </div>
+    </div>
     {% endfor %}
   </div>
 </div>

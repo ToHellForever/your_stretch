@@ -241,12 +241,12 @@ p2 {
 }
 
 .submit-button {
-    background: rgba(255, 204, 130, 1);
+    background: rgba(255, 204, 130, 1) !important;
     border: none;
-    color: rgba(38, 35, 35, 1);
+    color: rgba(38, 35, 35, 1) !important   ;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    font-size: 1.2vw;
+    font-size: 1.2vw !important;
     padding: 10px 30px;
     border-radius: 6px;
     cursor: pointer;
@@ -262,10 +262,18 @@ p2 {
 /* для блока ПРИМЕРЫ РАБОТ */
 hr {
     height: 2px;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(204, 199, 207, 1);
     margin: 0 auto;
 }
-
+.work-card {
+    width: 90%;
+    height: 100%;
+    background: #F4F9FB;
+    box-shadow: -3px 5px 12.1px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
 .work-image {
     width: 16vw;
     height: 14vw;
@@ -281,18 +289,32 @@ hr {
   color: #000000;
   margin-bottom: 10px;
 text-align: start;
-margin-left: 2vw;
 }
 
-.work-details li {
+.work-details-container {
+  padding: 20px; /* Добавьте нужный размер отступа */
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: 1vw;
   color: #000000;
   margin-bottom: 5px;
-text-align: start;
 }
 
+.detail-label {
+  text-align: start;
+}
+
+.detail-value {
+  text-align: end;
+}
+.price-value {
+  font-weight: bold; /* Делает текст жирным */
+}
 .btn-primary {
   background-color: #378BC5;
   border-radius: 6px;
@@ -307,3 +329,5 @@ text-align: start;
 .btn-primary:hover {
   background-color: #2C7DBD;
 }
+
+
