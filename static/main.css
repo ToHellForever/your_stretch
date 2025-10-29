@@ -261,42 +261,36 @@ p2 {
 
 /* для блока ПРИМЕРЫ РАБОТ */
 hr {
-    border: 2px rgba(204, 199, 207, 1);
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.25);
     margin: 0 auto;
-}
-.work-card {
-    width: 90%;
-    height: 100%;
-    background: #F4F9FB;
-    box-shadow: -3px 5px 12.1px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    text-align: start;
-    margin: 0 auto;
-    margin-top: 20px;
 }
 
 .work-image {
     width: 16vw;
     height: 14vw;
     margin-top: 10px;
-    border-radius: 13px;
+    border-radius: 23px;
     object-fit: cover;
 }
 
 .work-name {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.5vw;
   color: #000000;
   margin-bottom: 10px;
+text-align: start;
+margin-left: 2vw;
 }
 
 .work-details li {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1vw;
   color: #000000;
   margin-bottom: 5px;
+text-align: start;
 }
 
 .btn-primary {
@@ -307,22 +301,9 @@ hr {
   font-size: 17.6112px;
   color: #FFFFFF;
   padding: 10px 20px;
+  margin-bottom: 20px;
 }
 
 .btn-primary:hover {
   background-color: #2C7DBD;
-}
-
-@media (min-width: 768px) {
-  .work-card {
-    width: 100%;
-    max-width: 273px;
-  }
-}
-
-@media (max-width: 767px) {
-  .work-card {
-    width: 100%;
-    max-width: none;
-  }
 }

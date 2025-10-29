@@ -162,18 +162,18 @@
   <h1>ПРИМЕРЫ РАБОТ</h1>
   <div class="row mt-3">
     {% for work in profiles %}
-      <div class="col-md-4 col-sm-6 col-xs-12 mb-4 d-flex justify-content-center">
-        <div class="work-card shadow p-3 rounded bg-white">
-          <img src="{{ work.image.url }}" class="work-image w-100 rounded" alt="{{ work.name }}">
+      <div class="col-md-4 col-sm-6 col-xs-12 mb-4 d-flex">
+      <div class='product-card'>
+        <img src="{{ work.image.url }}" class='work-image' alt="{{ work.title }}">
           <h3 class="work-name mt-3">{{ work.name }}</h3>
           <ul class="list-unstyled work-details">
-            <li><strong>Площадь:</strong> {{ work.area }} м²</li>
+            <li>Площадь: {{ work.area }} м²</li>
             <hr>
-            <li><strong>Кол-во углов:</strong> {{ work.angles }}</li>
+            <li>Кол-во углов: {{ work.angles }}</li>
             <hr>
-            <li><strong>Профиль:</strong> {{ work.profile }}</li>
+            <li>Профиль: {{ work.profile }}</li>
             <hr>
-            <li><strong>Стоимость:</strong> {{ work.price|floatformat:0 }} руб./м²</li>
+            <li>Цена: {{ work.price|floatformat:0 }} руб./м²</li>
           </ul>
           <a href="#" class="btn btn-primary mt-3">Заказать замер</a>
         </div>
