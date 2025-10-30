@@ -13,13 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
       prevEl: ".swiper-slide-prev"
     },
     initialSlide: 1, // Начинаем со второго слайда (чтобы был центральный)
-    breakpoints: {
-      // Для мобильных устройств
-      "@0": {
-        slidesPerView: 1.2,
-        centeredSlides: true,
-      }
-    }
+    slidesPerView: 1.6, // Показываем больше слайдов по краям
+    
   });
 
   // Добавляем обработчики событий для кнопок навигации внутри слайдов

@@ -1,6 +1,6 @@
 /* лого в шапке */
 .logo {
-    width: 15vw;
+    width: 100%;
 }
 /* кнопка в шапке */
 .header_button {
@@ -48,23 +48,27 @@
 /* банеры в карусели */
 .img-carousel {
     width: 100%;
+    height: auto;
+    border-radius: 20px;
 }
 
 /* Стили для слайдов карусели */
 .swiper-slide {
+  width: 100%;
+  height: auto !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-
-/* Увеличиваем центральный слайд (пока не работает)*/
 .swiper-slide-active {
-  transform: scale(1.2);
-  z-index: 10;
+  transform: scaleY(1.1) !important; /* Increase or decrease the value to adjust the height of the center slide */
+  height: auto;
+    transition: transform 0.3s ease-in-out;
+  padding-top: 2%; /* Add padding to the top of the slide to make sure it doesn't go outside the container */
+  padding-bottom: 2%; /* Add padding to the bottom of the slide to make sure it doesn't go outside the container */
 }
-
 /* Навигационные кнопки внутри слайда */
 .swiper-slide-nav {
   position: absolute;
@@ -74,6 +78,7 @@
   justify-content: space-between;
   padding: 0 20px;
   z-index: 20;
+opacity: 0.5;
 }
 /* сами кнопки навигации */
 .swiper-slide-next, 
