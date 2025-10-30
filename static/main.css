@@ -103,13 +103,12 @@ h1 {
 
 /* для колонок */
 .col-4 {
-    margin-top: 40px;
     text-align: left;
     padding: 25px;
+    margin-top: 30px;
 }
 /* для иконок в блоке */
 .icon-block1 {
-    margin-top: 30px;
     width: 6vw;
     height: 6vw;
     margin-left: 0px !important;
@@ -366,7 +365,6 @@ h4 {
 }
 
 .icon-block2 {
-    margin-top: 30px;
     width: 6vw;
     height: 6vw;
     margin-left: 0px !important;
@@ -411,11 +409,13 @@ h5 {
   display: flex;
   justify-content: center; /* Выравнивание по горизонтали */
   align-items: center; /* Выравнивание по вертикали */
-  height: 100vh; /* Весь экран */
+  height: 70vh;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  margin-bottom: 0 !important; /* Убираем отступ снизу */
 }
+
 
 .centered-box {
   background-color: rgba(255, 255, 255, 1); /* Белый полупрозрачный фон */
