@@ -350,8 +350,8 @@ text-align: start;
 
 .grid-item img {
   width: 100%;
-  height: 15vw !important;
-  object-fit: contain; /* Обрезаем фото под размеры ячейки */
+  height: 15vw;
+  object-fit: cover; /* Обрезаем фото под размеры ячейки */
   border-radius: inherit;
 }
 
