@@ -35,3 +35,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var container = document.getElementById('photos-masonry');
+  imagesLoaded(container, function () {
+    var msnry = new Masonry(container, {
+      itemSelector: '.grid-item',
+      percentPosition: true,
+      gutter: 10
+    });
+  });
+});
