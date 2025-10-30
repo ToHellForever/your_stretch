@@ -355,8 +355,39 @@ text-align: start;
   border-radius: inherit;
 }
 
-@media only screen and (max-width: 768px) {
-  .grid-item {
-    width: 45%; /* Две колонки на небольших экранах */
-  }
+
+/* для блока Преимущества натяжных потолков */
+h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 2.5vw;
+    text-align: center;
+    color:white;
+    margin-top: 50px;
+}
+
+.icon-block2 {
+    margin-top: 30px;
+    width: 6vw;
+    height: 6vw;
+    margin-left: 0px !important;
+}
+
+p2 {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.1vw;
+    margin: 0;
+    color: white;
+    margin-top: 40px;
+}
+/* для текста в блоке */
+p3 {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 300 !important;
+    font-size: 1vw;
+    line-height: 120%;
+    color: white;
 }
