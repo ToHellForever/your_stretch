@@ -213,7 +213,7 @@
 
 
 {% comment %} БЛОК Преимущества натяжных потолков {% endcomment %}
-<div class='container-fluid mt-5' style='background-color: rgba(41, 37, 73, 1);'>
+<div class='container-fluid mt-5' style='background-color: rgba(41, 37, 73, 1); '>
   <div class='container'>
     <div class='row' style='align-items: stretch;'>
       <h4 style='margin-top: 5vw;'>ПРЕИМУЩЕСТВА НАТЯЖНЫХ ПОТОЛКОВ</h4>
@@ -245,6 +245,49 @@
   </div>
   </div>
 </div>
+
+
+{% comment %} КОНТАКТНЫЙ БЛОК {% endcomment %}
+<div class='container-fluid contact-container' style='background-image: url("media/bg_contact.png");'>
+  <div class='centered-box'>
+    <h5>ТВОЙ НАТЯЖНОЙ</h1>
+    <p class='contact-text'>Звонить по телефону: +7 964 650 03 02</p>
+    <p class='contact-text'>900-302</p>
+    <p class='contact-text'>Андрес: г. Иркутск, м-н Университетский 43</p>
+  </div>
+</div>
+
+
+
+{% comment %} блок меню {% endcomment %}
+    <div class='container'>
+        <div class='row'>
+            <div class='col-3'>
+                {% comment %} Логотип {% endcomment %}
+                <img src="media/icons/logo.png" alt="logo" class='logo'>
+            </div>
+            <div class='col-3'>
+                {% comment %} кнопка {% endcomment %}
+                <button class='header_button'>Заказать звонок</button>
+            </div>
+            <div class='col-3'>
+                <div class="d-flex align-items-center contact-block">
+                    <img src="media/icons/phone.png" alt="" class="contact_icon_phone">
+                    <div>
+                        <p class="contacts">+7 964 650 03 02</p>
+                        <p class="contacts">900-302</p>
+                    </div>
+                </div>
+            </div>
+            <div class='col-3'>
+                {% comment %} иконки в строку{% endcomment %}
+                <a href="#"><img src="media/icons/telegram.svg" alt="" class='contact_icon'></a> 
+                <a href="#"><img src="media/icons/whatsapp.svg" alt="" class='contact_icon'></a>
+                <a href="#"><img src="media/icons/max.svg" alt="" class='contact_icon'></a>
+
+            </div>
+        </div>
+    </div>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

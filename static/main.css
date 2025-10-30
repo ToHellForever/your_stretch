@@ -333,7 +333,7 @@ text-align: start;
 
 
 
-
+/* для ГАЛЕРЕИ РАБОТ */
 .photos-grid {
   width: 100%;
   margin: 0 auto;
@@ -371,7 +371,6 @@ h4 {
     height: 6vw;
     margin-left: 0px !important;
 }
-
 p2 {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
@@ -381,7 +380,6 @@ p2 {
     color: white;
     margin-top: 40px;
 }
-/* для текста в блоке */
 p3 {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
@@ -390,3 +388,44 @@ p3 {
     line-height: 120%;
     color: white;
 }
+
+
+/* ДЛЯ КОНТАКТНОГО БЛОКА */
+h5 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 2.8vw;
+    text-align: center;
+    color:rgba(41, 37, 73, 1);
+    margin-bottom: 30px;
+}
+.contact-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.3vw;
+    text-align: center;
+    color:black;
+    margin: 0;
+}
+.contact-container   {
+  display: flex;
+  justify-content: center; /* Выравнивание по горизонтали */
+  align-items: center; /* Выравнивание по вертикали */
+  height: 100vh; /* Весь экран */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.centered-box {
+  background-color: rgba(255, 255, 255, 1); /* Белый полупрозрачный фон */
+  padding: 5vw;
+  border-radius: 19px;
+  text-align: center;
+box-shadow: 1px 4px 9.4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
