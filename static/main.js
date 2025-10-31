@@ -35,20 +35,45 @@ document.addEventListener("DOMContentLoaded", function() {
 // для модального окна
 document.addEventListener('DOMContentLoaded', function () {
   const modal = document.getElementById('callback-modal');
-  const openButton = document.querySelector('.open-modal');
-  const closeButton = document.querySelector('.close-modal');
+  const openButtons = document.querySelectorAll('.open-modal');
+  const closeButtons = document.querySelectorAll('.close-modal');
 
-  openButton.addEventListener('click', function () {
-    modal.style.display = 'block'; // Открывает модалку
+  // Функция для открытия модального окна
+  function openModal() {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; 
+  }
+
+  // Функция для закрытия модального окна
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; 
+  }
+
+  // Открытие модального окна по кнопке
+  openButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault(); 
+      openModal();
+    });
   });
 
-  closeButton.addEventListener('click', function () {
-    modal.style.display = 'none'; // Закрывает модалку
+  // Закрытие модального окна по кнопке закрытия
+  closeButtons.forEach(button => {
+    button.addEventListener('click', closeModal);
   });
 
-  window.onclick = function(event) {
+  // Закрытие модального окна при клике вне его
+  modal.addEventListener('click', function(event) {
     if (event.target === modal) {
-      modal.style.display = 'none'; // Закрывает модалку при щелчке вне нее
+      closeModal();
     }
-  };
+  });
+
+  // Закрытие модального окна по нажатию ESC
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && modal.style.display === 'flex') {
+      closeModal();
+    }
+  });
 });
