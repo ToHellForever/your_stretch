@@ -32,14 +32,23 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
+// для модального окна
 document.addEventListener('DOMContentLoaded', function () {
-  var container = document.getElementById('photos-masonry');
-  imagesLoaded(container, function () {
-    var msnry = new Masonry(container, {
-      itemSelector: '.grid-item',
-      percentPosition: true,
-      gutter: 10
-    });
+  const modal = document.getElementById('callback-modal');
+  const openButton = document.querySelector('.open-modal');
+  const closeButton = document.querySelector('.close-modal');
+
+  openButton.addEventListener('click', function () {
+    modal.style.display = 'block'; // Открывает модалку
   });
+
+  closeButton.addEventListener('click', function () {
+    modal.style.display = 'none'; // Закрывает модалку
+  });
+
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none'; // Закрывает модалку при щелчке вне нее
+    }
+  };
 });

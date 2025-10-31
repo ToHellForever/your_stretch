@@ -19,7 +19,7 @@
             </div>
             <div class='col-3'>
                 {% comment %} кнопка {% endcomment %}
-                  <button class='header_button'>Заказать звонок</button>
+                  <button class='header_button open-modal'>Заказать звонок</button>
             </div>
             <div class='col-3'>
                 <div class="d-flex align-items-center contact-block">
@@ -32,9 +32,9 @@
             </div>
             <div class='col-3'>
                 {% comment %} иконки в строку{% endcomment %}
-                <a href="#"><img src="media/icons/telegram.png" alt="" class='contact_icon'></a> 
-                <a href="#"><img src="media/icons/whatsapp.png" alt="" class='contact_icon'></a>
-                <a href="#"><img src="media/icons/max.png" alt="" class='contact_icon'></a>
+                <a href="https://t.me/To_hell_forever"><img src="media/icons/telegram.png" alt="" class='contact_icon'></a> 
+                <a href="https://wa.me/79960521646"><img src="media/icons/whatsapp.png" alt="" class='contact_icon'></a>
+                <a href="https://max.ru/u/f9LHodD0cOJtavduYdK7ZtD21Fd_YO8TFXzv-AU2hiDjP37UOZyCI68rZJk"><img src="media/icons/max.png" alt="" class='contact_icon'></a>
 
             </div>
         </div>
@@ -106,10 +106,9 @@
           <h3 class='product-title'>{{ product.title }}</h3>
           {% comment %} оставить только основной ценник без цифр после запятй {% endcomment %}
           <p class='product-price'>от {{ product.price|floatformat:0 }} руб./м²</p>
-          <div class='product-button'>
-            <p class='product-button-text'>Заказать замер</p>
+            {% comment %} ссылка на форму {% endcomment %}
+            <button class='product-button' type=" button" href="#request-form"><a href="#request-form" class='product-link'>Заказать замер</a></button>
           </div>
-        </div>
       </div>
     {% endfor %}
   </div>
@@ -118,7 +117,7 @@
 
 {% comment %} блок с формой {% endcomment %}
 <div class='container mt-5'>
-  <form class='request-form'>
+  <form class='request-form' id='request-form'>
     <div class='row mb-3'>
       <div class='text-in-form'>
         <h2>Заказать рассчёт стоимости потолка</h2>
@@ -189,7 +188,7 @@
             </div>
           </div>
         </div>
-        <a href="#" class="btn btn-primary mt-3">Заказать замер</a>
+        <button class='product-button' type=" button"><a href="#request-form" class='product-link'>Заказать замер</a></button>
       </div>
     </div>
     {% endfor %}
@@ -283,13 +282,39 @@
             </div>
             <div class='col-3'>
                 {% comment %} иконки в строку{% endcomment %}
-                <a href="#"><img src="media/icons/telegram.png" alt="" class='contact_icon'></a> 
-                <a href="#"><img src="media/icons/whatsapp.png" alt="" class='contact_icon'></a>
-                <a href="#"><img src="media/icons/max.png" alt="" class='contact_icon'></a>
+                <a href="https://t.me/To_hell_forever"><img src="media/icons/telegram.png" alt="" class='contact_icon'></a> 
+                <a href="https://wa.me/79960521646"><img src="media/icons/whatsapp.png" alt="" class='contact_icon'></a>
+                <a href="https://max.ru/u/f9LHodD0cOJtavduYdK7ZtD21Fd_YO8TFXzv-AU2hiDjP37UOZyCI68rZJk"><img src="media/icons/max.png" alt="" class='contact_icon'></a>
 
             </div>
         </div>
     </div>
+
+
+{% comment %} блок с модальным окном {% endcomment %}
+<div class="modal overlay" id="callback-modal" tabindex="-1" role="dialog" aria-labelledby="callbackModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h6 class="modal-title">Есть вопросы? </h6>
+        <h6 class="modal-title">Закажи обратный звонок!</h2>
+        <p class='modal-text mt-4'>Мы позвоним и ответим на все вопросы.</p>
+        <input type="tel" class="form-input" placeholder="Напишите ваш номер" />
+        <p class='modal-text mt-3'>Или свяжитесь с нами</p>
+        <p class='modal-text'>+7 964 650 03 02</p>
+        <p class='modal-text'>900-302</p>
+  <div class="icon-container">
+    <a href="https://t.me/To_hell_forever"><img src="media/icons/telegram.png" alt="" class='contact_icon_modal'></a>
+    <a href="https://wa.me/79960521646"><img src="media/icons/whatsapp.png" alt="" class='contact_icon_modal'></a>
+    <a href="https://max.ru/u/f9LHodD0cOJtavduYdK7ZtD21Fd_YO8TFXzv-AU2hiDjP37UOZyCI68rZJk"><img src="media/icons/max.png" alt="" class='contact_icon_modal'></a>
+  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
