@@ -12,14 +12,14 @@
   <body>
     {% comment %} Шапка {% endcomment %}
     <div class='container'>
-        <div class='row'>
+        <div class='row d-flex align-items-center'>
             <div class='col-3'>
                 {% comment %} Логотип {% endcomment %}
                 <img src="media/icons/logo.png" alt="logo" class='logo'>
             </div>
             <div class='col-3'>
                 {% comment %} кнопка {% endcomment %}
-                <button class='header_button'>Заказать звонок</button>
+                  <button class='header_button'>Заказать звонок</button>
             </div>
             <div class='col-3'>
                 <div class="d-flex align-items-center contact-block">
@@ -32,15 +32,15 @@
             </div>
             <div class='col-3'>
                 {% comment %} иконки в строку{% endcomment %}
-                <a href="#"><img src="media/icons/telegram.svg" alt="" class='contact_icon'></a> 
-                <a href="#"><img src="media/icons/whatsapp.svg" alt="" class='contact_icon'></a>
-                <a href="#"><img src="media/icons/max.svg" alt="" class='contact_icon'></a>
+                <a href="#"><img src="media/icons/telegram.png" alt="" class='contact_icon'></a> 
+                <a href="#"><img src="media/icons/whatsapp.png" alt="" class='contact_icon'></a>
+                <a href="#"><img src="media/icons/max.png" alt="" class='contact_icon'></a>
 
             </div>
         </div>
     </div>
 
-<div class="container-fluid mt-5">
+<div class="container-fluid mt-3">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       {% for banner in banners %}
@@ -167,7 +167,7 @@
         <div class="work-details-container">
           
           <div class="work-details">
-          <h3 class="work-name mt-3">{{ work.name }}</h3>
+          <h3 class="work-name mt-2">{{ work.name }}</h3>
             <div class="detail-row">
               <span class="detail-label">Площадь:</span>
               <span class="detail-value">{{ work.area|floatformat:0 }} м²</span>
@@ -200,47 +200,49 @@
 {% comment %} ДЛЯ ГАЛЕРЕИ РАБОТ {% endcomment %}
 <div class='container mt-5'>
   <h1>ГАЛЕРЕЯ РАБОТ</h1>
-<div id="photos-masonry" class="photos-grid">
-  {% for gallery in galleries %}
-    {% for image in gallery.images.all|slice:"0:20" %}
-      <div class="grid-item">
-        <img src="{{ image.image.url }}" alt="Фото из галереи">
-      </div>
+  <div class="row mt-4">
+    {% for gallery in galleries %}
+      {% for image in gallery.images.all|slice:"0:20" %}
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="{{ image.image.url }}" alt="Фото из галереи" class="card-img-top">
+          </div>
+        </div>
+      {% endfor %}
     {% endfor %}
-  {% endfor %}
-</div>
+  </div>
 </div>
 
 
 {% comment %} БЛОК Преимущества натяжных потолков {% endcomment %}
-<div class='container-fluid mt-5' style='background-color: rgba(41, 37, 73, 1); '>
+<div class='container-fluid mt-5' style='background-color: rgba(41, 37, 73, 1); margin-top: 150px !important;'>
   <div class='container'>
     <div class='row' style='align-items: stretch;'>
       <h4 style='margin-top: 5vw;'>ПРЕИМУЩЕСТВА НАТЯЖНЫХ ПОТОЛКОВ</h4>
     <div class='col-4' style='display: flex; flex-direction: column;'>
       <img src="media/icons/block2/текстур.svg" alt="" class='icon-block2'>
-      <p2>Разнообразие текстур</p2>
-      <p3>Классические матовые, современные глянцевые и сатиновые поверхности.</p1>
+      <p3>Разнообразие текстур</p3>
+      <p4>Классические матовые, современные глянцевые и сатиновые поверхности.</p1>
     </div>
     <div class='col-4' style='display: flex; flex-direction: column;'>
       <img src="media/icons/block2/инливид решения.svg" alt="" class='icon-block2'>
-      <p2>Индивидуальные решения</p2>
-      <p3>Возможность выбора потолка под любой стиль интерьера.</p3>
+      <p3>Индивидуальные решения</p3>
+      <p4>Возможность выбора потолка под любой стиль интерьера.</p4>
     </div>
     <div class='col-4' style='display: flex; flex-direction: column;'>
       <img src="media/icons/block2/освещение 2.svg" alt="" class='icon-block2'>
-      <p2>Уникальные варианты освещения</p2>
-      <p3>Встроенные светильники, эффектные подсветки и многое другое.</p3>
+      <p3>Уникальные варианты освещения</p3>
+      <p4>Встроенные светильники, эффектные подсветки и многое другое.</p4>
     </div>
     <div class='col-4 mb-5' style='display: flex; flex-direction: column;'>
       <img src="media/icons/block2/уход.svg" alt="" class='icon-block2'>
-      <p2>Простота ухода</p2>
-      <p3>Легкость в обслуживании и долговечность материалов</p3>
+      <p3>Простота ухода</p3>
+      <p4>Легкость в обслуживании и долговечность материалов</p4>
     </div>
     <div class='col-4 mb-5' style='display: flex; flex-direction: column;'>
       <img src="media/icons/block2/скрыть дефекты.svg" alt="" class='icon-block2'>
-      <p2>Возможность скрыть неровности и дефекты</p2>
-      <p3>Возможность выбора потолка под любой стиль интерьера.</p1>
+      <p3>Возможность скрыть неровности и дефекты</p3>
+      <p4>Возможность выбора потолка под любой стиль интерьера.</p1>
     </div>
   </div>
   </div>
@@ -281,9 +283,9 @@
             </div>
             <div class='col-3'>
                 {% comment %} иконки в строку{% endcomment %}
-                <a href="#"><img src="media/icons/telegram.svg" alt="" class='contact_icon'></a> 
-                <a href="#"><img src="media/icons/whatsapp.svg" alt="" class='contact_icon'></a>
-                <a href="#"><img src="media/icons/max.svg" alt="" class='contact_icon'></a>
+                <a href="#"><img src="media/icons/telegram.png" alt="" class='contact_icon'></a> 
+                <a href="#"><img src="media/icons/whatsapp.png" alt="" class='contact_icon'></a>
+                <a href="#"><img src="media/icons/max.png" alt="" class='contact_icon'></a>
 
             </div>
         </div>
