@@ -1,0 +1,58 @@
+/* для блок Стоимость услуг */
+/* Стили для карточек товаров */
+.product-card {
+    width: 90%;
+    height: 100%;
+    background: #F4F9FB;
+    box-shadow: -3px 5px 12.1px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.product-image {
+    width: 16vw;
+    height: 14vw;
+    margin-top: 10px;
+    border-radius: 13px;
+    object-fit: cover;
+}
+
+.product-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 120%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.product-price {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: #000000;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.product-button {
+    background: #378BC5;
+    border-radius: 6px;
+    padding: 13px;
+    margin-bottom: 20px;
+    color: white;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+.product-button:hover {
+    background: #2C6FAB;
+    /* плавное увеличение размера*/
+    transition: all 0.3s ease-in-out;
+}

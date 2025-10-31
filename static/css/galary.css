@@ -1,0 +1,12 @@
+/* для ГАЛЕРЕИ РАБОТ */
+.card-img-top {
+    width: 100%;
+    height: 16rem;
+    border:none;
+    border-radius: 29px;
+    object-fit: cover;
+}
+
+.card {
+    border: none;
+}

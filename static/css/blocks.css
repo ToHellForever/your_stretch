@@ -1,0 +1,78 @@
+/* BLOCK1 С 6 ИКОНКАМИ */
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-align: center;
+    color:rgba(41, 37, 73, 1);
+}
+
+/* для колонок */
+.col-4 {
+    text-align: left;
+    padding: 25px;
+    margin-top: 30px;
+}
+/* для иконок в блоке */
+.icon-block1 {
+    width: 6rem;
+    height: 6rem;
+    margin-left: 0px !important;
+}
+/* для заголовков в блоке */
+.block1-head {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0;
+    margin-top: 40px;
+    white-space: nowrap; 
+    display: inline-block;
+}
+/* для текста в блоке */
+.block1-text {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+
+
+
+/* для блока Преимущества натяжных потолков */
+h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 2.5vw;
+    text-align: center;
+    color:white;
+}
+
+.icon-block2 {
+    width: 6rem;
+    height: 6rem;
+    margin-left: 0px !important;
+}
+
+/* для заголовков в блоке */
+.block2-head {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3vw;
+    margin: 0;
+    color: white;
+    margin-top: 40px;
+    white-space: nowrap; 
+    display: inline-block;
+}
+/* для текста в блоке */
+.block2-text {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    color: white;
+    font-weight: 400;
+    font-size: 1.1vw;
+}

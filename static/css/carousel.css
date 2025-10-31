@@ -1,0 +1,49 @@
+/* БЛОК С КАРУСЕЛЬЮ */
+/* банеры в карусели */
+.img-carousel {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Стили для слайдов карусели */
+.swiper-slide {
+  width: 100%;
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.swiper-slide-active {
+  transform: scaleY(1.1) !important;
+  height: auto;
+    transition: transform 0.3s ease-in-out;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+/* Навигационные кнопки внутри слайда */
+.swiper-slide-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 20;
+opacity: 0.5;
+}
+.swiper-slide-prev
+/* сами кнопки навигации */
+.swiper-slide-next, 
+.swiper-slide-prev {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* разворот кнопки next */
+.swiper-slide-next {
+    transform: rotate(180deg);
+}

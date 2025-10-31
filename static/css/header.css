@@ -1,0 +1,50 @@
+/* лого в шапке */
+.logo {
+    width: 100%;
+}
+/* кнопка в шапке */
+.header_button {
+    background: #378BC5;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    border: none;
+    width: auto; 
+    height: auto;
+    font-size: 1.2rem;
+    white-space: nowrap; 
+    padding: 8px 16px; 
+    display: inline-block; 
+}
+/* иконка телефона */
+.contact_icon_phone {
+    width: 3vw;
+    height: auto;
+}
+/* контакты в шапке */
+.contacts {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0; 
+    margin-left: 20px;
+    text-align: start !important;
+    white-space: nowrap; 
+}
+.contact-block {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+/* Вертикальное выравнивание элементов в шапке */
+.container .row {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+/* иконки контактов шапке */
+.contact_icon {
+    width: 3vw;
+    height: auto;
+    margin-right: 10px;
+    object-fit: contain;
+}
