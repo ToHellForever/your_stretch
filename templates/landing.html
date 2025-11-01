@@ -19,18 +19,56 @@
   </head>
   <body>
     {% comment %} Шапка {% endcomment %}
-    <div class='container'>
-        <div class='row d-flex align-items-center'>
-            <div class='col-3'>
-                {% comment %} Логотип {% endcomment %}
+<div class='container'>
+    <div class='row d-flex align-items-center'>
+        <!-- Логотип и бургер меню для мобильных -->
+        <div class='col-3 d-flex align-items-center'>
+            <!-- Логотип -->
+            <img src="media/icons/logo.png" alt="logo" class='logo'>
+            <!-- Бургер иконка для мобильных -->
+            <div class='burger-menu d-block d-md-none' id='burger'>
+                &#9776; <!-- Юникод для иконки бургера -->
+            </div>
+        </div>
+        <!-- Кнопка заказа -->
+        <div class='col-3'>
+            <button class='header_button open-modal'>Заказать звонок</button>
+        </div>
+        <!-- Контактная информация -->
+        <div class='col-3'>
+            <div class="d-flex align-items-center contact-block">
+                <img src="media/icons/phone.png" alt="" class="contact_icon_phone">
+                <div>
+                    <p class="contacts">+7 964 650 03 02</p>
+                    <p class="contacts">900-302</p>
+                </div>
+            </div>
+        </div>
+        <!-- Иконки соцсетей -->
+        <div class='col-3'>
+            <a href="https://t.me/To_hell_forever"><img src="media/icons/telegram.png" alt="" class='contact_icon'></a>
+            <a href="https://wa.me/79960521646"><img src="media/icons/whatsapp.png" alt="" class='contact_icon'></a>
+            <a href="https://max.ru/u/f9LHodD0cOJtavduYdK7ZtD21Fd_YO8TFXzv-AU2hiDjP37UOZyCI68rZJk"><img src="media/icons/max.png" alt="" class='contact_icon'></a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Модальное окно меню (скрыто по умолчанию) -->
+<div id="mobileMenu" class="modal-menu d-none">
+    <div class="menu-content">
+        <button class="close-btn" id="closeMenu">&times;</button>
+        <!-- Здесь добавляем скрытые элементы -->
+        <div class="mobile-header-elements">
+            <!-- Логотип -->
+            <div class="mobile-logo mb-3">
                 <img src="media/icons/logo.png" alt="logo" class='logo'>
             </div>
-            <div class='col-3'>
-                {% comment %} кнопка {% endcomment %}
-                  <button class='header_button open-modal'>Заказать звонок</button>
-            </div>
-            <div class='col-3'>
-                <div class="d-flex align-items-center contact-block">
+            <hr>
+            <!-- Кнопка "Заказать звонок" -->
+            <!-- Контактная информация -->
+            <div class="contact-block mb-3">
+                <div class="d-flex align-items-center">
                     <img src="media/icons/phone.png" alt="" class="contact_icon_phone">
                     <div>
                         <p class="contacts">+7 964 650 03 02</p>
@@ -38,15 +76,19 @@
                     </div>
                 </div>
             </div>
-            <div class='col-3'>
-                {% comment %} иконки в строку{% endcomment %}
-                <a href="https://t.me/To_hell_forever"><img src="media/icons/telegram.png" alt="" class='contact_icon'></a> 
+            <!-- Иконки соцсетей -->
+            <div class="social-icons d-flex">
+                <a href="https://t.me/To_hell_forever"><img src="media/icons/telegram.png" alt="" class='contact_icon'></a>
                 <a href="https://wa.me/79960521646"><img src="media/icons/whatsapp.png" alt="" class='contact_icon'></a>
                 <a href="https://max.ru/u/f9LHodD0cOJtavduYdK7ZtD21Fd_YO8TFXzv-AU2hiDjP37UOZyCI68rZJk"><img src="media/icons/max.png" alt="" class='contact_icon'></a>
-
+            </div>
+            <div class="mb-3">
+                <button class='header_button open-modal'>Заказать звонок</button>
             </div>
         </div>
+        <!-- Можно сюда добавить остальные пункты меню -->
     </div>
+</div>
 
 <div class="container-fluid mt-3">
   <div class="swiper mySwiper">
