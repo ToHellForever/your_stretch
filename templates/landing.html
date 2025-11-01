@@ -19,7 +19,7 @@
   </head>
   <body>
 {% comment %} Шапка {% endcomment %}
-<div class='container d-none d-md-block'>
+<div class='container d-none d-lg-block'>
     <div class='row d-flex align-items-center'>
         <div class='col-3'>
             {% comment %} Логотип {% endcomment %}
@@ -48,7 +48,7 @@
 </div>
 
 {% comment %} Шапка мобильная (будет скрыта на десктопе) {% endcomment %}
-<div class='container d-lg-none'>
+<div class='container d-lg-none mobile-burger-menu'>
     <div class='row d-flex align-items-center'>
         <!-- Логотип и бургер меню для мобильных -->
         <div class='col-3 d-flex align-items-center'>
@@ -57,7 +57,7 @@
         </div>
         <div class='col-9 d-flex justify-content-end'>
             <!-- Бургер иконка для мобильных -->
-            <div class='burger-menu d-block d-md-none' id='burger' onclick="document.getElementById('mobileMenu').classList.remove('d-none')">
+            <div class='burger-menu' id='burger' onclick="document.getElementById('mobileMenu').classList.remove('d-none')">
                 ☰ <!-- Юникод для иконки бургера -->
             </div>
         </div>
