@@ -82,9 +82,7 @@
     font-size: 24px;
     cursor: pointer;
 }
-.d-none {
-    display: none !important;
-}
+
 @media(max-width: 767px) {
     .d-none {
         display: none !important;
