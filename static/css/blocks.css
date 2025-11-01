@@ -45,7 +45,7 @@ h1 {
 h4 {
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
-    font-size: 2.5vw;
+    font-size: 2.5rem;
     text-align: center;
     color:white;
 }
@@ -61,7 +61,7 @@ h4 {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 1.3vw;
+    font-size: 1.3rem;
     margin: 0;
     color: white;
     margin-top: 40px;
@@ -74,5 +74,30 @@ h4 {
     font-style: normal;
     color: white;
     font-weight: 400;
-    font-size: 1.1vw;
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .block1-head {
+        font-size: 1rem;
+        white-space: wrap; 
+    }
+    .block1-text{
+        font-size: 0.7rem !important;
+    }
+    .block2-head {
+        font-size: 1rem;
+        white-space: wrap; 
+    }
+    .block1-text {
+        font-size: 0.7rem !important;
+    }
+    .col-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }
