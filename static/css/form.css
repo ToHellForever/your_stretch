@@ -42,7 +42,7 @@ h2 {
     color: rgba(38, 35, 35, 1) !important   ;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    font-size: 1.2vw !important;
+    font-size: 1.8vw !important;
     padding: 10px 30px;
     border-radius: 6px;
     cursor: pointer;
@@ -81,5 +81,12 @@ h2 {
     }
     .form-control, .form-select {
         font-size: 1rem
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 990px) {
+    .form-control::placeholder {
+        font-size: 0.7rem !important;
     }
 }
