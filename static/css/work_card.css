@@ -2,7 +2,8 @@
 hr {
     height: 2px;
     background-color: rgba(204, 199, 207, 1);
-    margin: 0 auto;
+    margin: 0 auto !important;
+
 }
 .work-card {
     width: 90%;
@@ -71,12 +72,21 @@ text-align: start;
 
 }
 @media (max-width: 768px) {
+  .work-card {
+    width: 75%;
+    height: 100%;
+    text-align: center;
+  }
   .work-image {
     width: 90%;
-    height: 20rem;
+    height: 15rem;
     margin-top: 10px;
     border-radius: 23px;
     object-fit: cover;
+    /* центрируем картинку */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   .work-name {
     font-size: 1.2rem;

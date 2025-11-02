@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+  // Инициализация основной карусели
   const swiper = new Swiper(".mySwiper", {
     spaceBetween: 30, // Расстояние между слайдами
     pagination: false, // Отключаем пагинацию
@@ -19,6 +20,22 @@ document.addEventListener("DOMContentLoaded", function() {
       767: {
         slidesPerView: 1.6, // Показываем только один слайд на мобильных устройствах
       }
+    }
+  });
+
+  // Инициализация карусели для примеров работ (мобильная версия)
+  const workSwiper = new Swiper(".work-swiper-mobile", {
+    spaceBetween: 20, // Расстояние между слайдами
+    loop: true, // Зацикливаем слайды
+    slidesPerView: 1, // Показываем один слайд
+    centeredSlides: true, // Центрируем активный слайд
+    navigation: {
+      nextEl: ".work-swiper-next",
+      prevEl: ".work-swiper-prev"
+    },
+    autoplay: {
+      delay: 5000, // Пауза между слайдами
+      disableOnInteraction: false,
     }
   });
 
