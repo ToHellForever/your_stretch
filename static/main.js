@@ -83,6 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const burger = document.getElementById('burger');
     const mobileMenu = document.getElementById('mobileMenu');
     const closeBtn = document.getElementById('closeMenu');
+    const modal = document.getElementById('callback-modal');
+    const mobileOrderButton = document.querySelector('#mobileMenu .header_button.open-modal');
 
     burger.addEventListener('click', () => {
         mobileMenu.classList.remove('d-none');
@@ -90,6 +92,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closeBtn.addEventListener('click', () => {
         mobileMenu.classList.add('d-none');
+    });
+
+    // Обработчик для кнопки "Заказать звонок" в мобильном меню
+    mobileOrderButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Закрываем мобильное меню
+        mobileMenu.classList.add('d-none');
+        // Открываем модальное окно обратного звонка
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
     });
 
     // Можно добавить закрытие меню при клике вне его области

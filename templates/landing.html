@@ -318,18 +318,64 @@
 
 
 {% comment %} блок меню {% endcomment %}
-<div class='container'>
-        <div class='row'>
-            <div class='col-3'>
-                {% comment %} Логотип {% endcomment %}
+<div class='container d-none d-lg-block'>
+    <div class='row d-flex align-items-center'>
+        <div class='col-3'>
+            {% comment %} Логотип {% endcomment %}
+            <img src="media/icons/logo.png" alt="logo" class='logo'>
+        </div>
+        <div class='col-3'>
+            {% comment %} кнопка {% endcomment %}
+            <button class='header_button open-modal'>Заказать звонок</button>
+        </div>
+        <div class='col-3'>
+            <div class="d-flex align-items-center contact-block">
+                <img src="media/icons/phone.png" alt="" class="contact_icon_phone">
+                <div>
+                    <p class="contacts">+7 964 650 03 02</p>
+                    <p class="contacts">900-302</p>
+                </div>
+            </div>
+        </div>
+        <div class='col-3'>
+            {% comment %} иконки в строку{% endcomment %}
+            <a href="https://t.me/To_hell_forever"><img src="media/icons/telegram.png" alt="" class='contact_icon'></a> 
+            <a href="https://wa.me/79960521646"><img src="media/icons/whatsapp.png" alt="" class='contact_icon'></a>
+            <a href="https://max.ru/u/f9LHodD0cOJtavduYdK7ZtD21Fd_YO8TFXzv-AU2hiDjP37UOZyCI68rZJk"><img src="media/icons/max.png" alt="" class='contact_icon'></a>
+        </div>
+    </div>
+</div>
+
+{% comment %} Шапка мобильная (будет скрыта на десктопе) {% endcomment %}
+<div class='container-fluid d-lg-none mobile-burger-menu'>
+    <div class='row d-flex align-items-center'>
+        <!-- Логотип и бургер меню для мобильных -->
+        <div class='col-3 d-flex align-items-center'>
+            <!-- Логотип -->
+            <img src="media/icons/logo.png" alt="logo" class='logo'>
+        </div>
+        <div class='col-9 d-flex justify-content-end'>
+            <!-- Бургер иконка для мобильных -->
+            <div class='burger-menu' id='burger' onclick="document.getElementById('mobileMenu').classList.remove('d-none')">
+                ☰ <!-- Юникод для иконки бургера -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно меню (скрыто по умолчанию) -->
+<div id="mobileMenu" class="modal-menu d-none">
+    <div class="menu-content">
+        <button class="close-btn" id="closeMenu">×</button>
+        <div class="mobile-header-elements">
+            <!-- Логотип -->
+            <div class="mobile-logo mb-3">
                 <img src="media/icons/logo.png" alt="logo" class='logo'>
             </div>
-            <div class='col-3'>
-                {% comment %} кнопка {% endcomment %}
-                <button class='header_button'>Заказать звонок</button>
-            </div>
-            <div class='col-3'>
-                <div class="d-flex align-items-center contact-block">
+            <hr>
+            <!-- Контактная информация -->
+            <div class="contact-block mb-3">
+                <div class="d-flex align-items-center">
                     <img src="media/icons/phone.png" alt="" class="contact_icon_phone">
                     <div>
                         <p class="contacts">+7 964 650 03 02</p>
@@ -337,15 +383,18 @@
                     </div>
                 </div>
             </div>
-            <div class='col-3'>
-                {% comment %} иконки в строку{% endcomment %}
+            <!-- Иконки соцсетей -->
+            <div class="social-icons d-flex">
                 <a href="https://t.me/To_hell_forever"><img src="media/icons/telegram.png" alt="" class='contact_icon'></a>
                 <a href="https://wa.me/79960521646"><img src="media/icons/whatsapp.png" alt="" class='contact_icon'></a>
                 <a href="https://max.ru/u/f9LHodD0cOJtavduYdK7ZtD21Fd_YO8TFXzv-AU2hiDjP37UOZyCI68rZJk"><img src="media/icons/max.png" alt="" class='contact_icon'></a>
-
+            </div>
+            <div class="mb-3">
+                <button class='header_button open-modal'>Заказать звонок</button>
             </div>
         </div>
     </div>
+</div>
 
 
 {% comment %} блок с модальным окном {% endcomment %}
