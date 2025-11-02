@@ -101,3 +101,16 @@ h4 {
         margin-left: 0px;
     }
 }
+
+
+/* от 760 до 1216 пикселей */
+@media (min-width: 760px) and (max-width: 1216px) {
+    .block1-head {
+        white-space: wrap; 
+}
+    .block2-head {
+        white-space: wrap; 
+}
+
+
+}

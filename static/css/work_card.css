@@ -67,4 +67,18 @@ text-align: start;
 
 .btn-primary:hover {
   background-color: #2C7DBD;
+
+
+}
+@media (max-width: 768px) {
+  .work-image {
+    width: 90%;
+    height: 20rem;
+    margin-top: 10px;
+    border-radius: 23px;
+    object-fit: cover;
+  }
+  .work-name {
+    font-size: 1.2rem;
+  }
 }
