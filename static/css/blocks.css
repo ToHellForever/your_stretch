@@ -83,11 +83,11 @@ h4 {
         font-size: 1.5rem;
     }
     .block1-head {
-        font-size: 1rem;
+        font-size: 1.2rem;
         white-space: wrap; 
     }
     .block2-head {
-        font-size: 1rem;
+        font-size: 1.2rem;
         white-space: wrap; 
     }
     .block1-text {
@@ -100,6 +100,13 @@ h4 {
         flex: 0 0 50%;
         margin-left: 0px;
     }
+    h4 {
+        font-size: 1.5rem;
+    }
+    .col-4.block2 {
+        padding: 15px;
+        margin-top: 10px;
+    }
 }
 
 
@@ -111,6 +118,4 @@ h4 {
     .block2-head {
         white-space: wrap; 
 }
-
-
 }
