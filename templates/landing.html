@@ -316,7 +316,9 @@
 {% comment %} ДЛЯ ГАЛЕРЕИ РАБОТ {% endcomment %}
 <div class='container mt-5'>
   <h1>ГАЛЕРЕЯ РАБОТ</h1>
-  <div class="row mt-4">
+
+  <!-- Десктоп версия (показывается на больших экранах) -->
+  <div class="row mt-4 d-none d-md-flex">
     {% for gallery in galleries %}
       {% for image in gallery.images.all|slice:"0:20" %}
         <div class="col-md-4 mb-4">
@@ -326,6 +328,26 @@
         </div>
       {% endfor %}
     {% endfor %}
+  </div>
+
+  <!-- Мобильная версия (карусель) -->
+  <div class="d-md-none mt-4">
+    <div class="swiper gallery-swiper-mobile">
+      <div class="swiper-wrapper">
+        {% for gallery in galleries %}
+          {% for image in gallery.images.all|slice:"0:20" %}
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="{{ image.image.url }}" alt="Фото из галереи" class="card-img-top">
+              </div>
+            </div>
+          {% endfor %}
+        {% endfor %}
+      </div>
+      <!-- Навигация для мобильной карусели -->
+      <div class="swiper-button-next gallery-swiper-next"></div>
+      <div class="swiper-button-prev gallery-swiper-prev"></div>
+    </div>
   </div>
 </div>
 

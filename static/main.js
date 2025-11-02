@@ -39,6 +39,22 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+  // Инициализация карусели для галереи (мобильная версия)
+  const gallerySwiper = new Swiper(".gallery-swiper-mobile", {
+    spaceBetween: 10, // Расстояние между слайдами
+    loop: true, // Зацикливаем слайды
+    slidesPerView: 1, // Показываем одну фотографию на слайде
+    centeredSlides: true, // Центрируем активный слайд
+    navigation: {
+      nextEl: ".gallery-swiper-next",
+      prevEl: ".gallery-swiper-prev"
+    },
+    autoplay: {
+      delay: 3000, // Пауза между слайдами
+      disableOnInteraction: false,
+    }
+  });
+
   // Добавляем обработчики событий для кнопок навигации внутри слайдов
   document.querySelectorAll('.swiper-slide-prev').forEach(button => {
     button.addEventListener('click', function() {
