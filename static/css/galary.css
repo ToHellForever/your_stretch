@@ -9,16 +9,19 @@
 
 .card {
     border: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 @media (max-width: 768px) {
     .card-img-top {
-        width: 15rem;
-        height: 15rem;
+        width: 75%;
+        height: 16rem;
         border:none;
         border-radius: 29px;
-        object-fit: cover;
     }
 }
 
