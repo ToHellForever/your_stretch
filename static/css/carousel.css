@@ -42,8 +42,23 @@ opacity: 0.5;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} 
 /* разворот кнопки next */
 .swiper-slide-next {
     transform: rotate(180deg);
+}
+.swiper-slide-nav img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 20px;
+  opacity: 0.5;
+}
+
+
+@media (max-width: 768px) {
+  .swiper-slide-nav img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
