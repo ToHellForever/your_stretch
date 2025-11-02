@@ -83,29 +83,33 @@ h4 {
         font-size: 1.5rem;
     }
     .block1-head {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         white-space: wrap; 
+        margin-top: 20px;
     }
     .block2-head {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         white-space: wrap; 
+        margin-top: 20px;
     }
     .block1-text {
-        font-size: 0.9rem !important;
+        font-size: 1rem !important;
     }
     .block2-text {
-        font-size: 0.9rem !important;
+        font-size: 1rem !important;
     }
     .col-4 {
         flex: 0 0 50%;
         margin-left: 0px;
+        margin-top: 0px;
+        padding: 15px;
     }
     h4 {
         font-size: 1.5rem;
     }
     .col-4.block2 {
-        padding: 15px;
         margin-top: 10px;
+        padding: 5px;
     }
 }
 

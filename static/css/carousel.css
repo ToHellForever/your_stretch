@@ -56,7 +56,7 @@ opacity: 0.5;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .swiper-slide-nav img {
     width: 1.5rem;
     height: 1.5rem;
