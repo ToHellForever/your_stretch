@@ -98,11 +98,27 @@
 </div>
 
 <div class="container-fluid mt-3">
-  <div class="swiper mySwiper">
+  <!-- Карусель для десктопа (скрыта на мобильных) -->
+  <div class="swiper mySwiper d-none d-lg-block">
     <div class="swiper-wrapper">
       {% for banner in banners %}
         <div class="swiper-slide">
           <img src="{{ banner.image.url }}" alt="" class='img-carousel'>
+          <div class="swiper-slide-nav">
+            <div class="swiper-slide-prev"><img src="media/image.png" alt="" ></div>
+            <div class="swiper-slide-next"><img src="media/image.png" alt=""></div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Карусель для мобильных (скрыта на десктопе) -->
+  <div class="swiper mySwiper d-lg-none">
+    <div class="swiper-wrapper">
+      {% for mobile_banner in mobile_banners %}
+        <div class="swiper-slide">
+          <img src="{{ mobile_banner.image.url }}" alt="" class='img-carousel'>
           <div class="swiper-slide-nav">
             <div class="swiper-slide-prev"><img src="media/image.png" alt="" ></div>
             <div class="swiper-slide-next"><img src="media/image.png" alt=""></div>

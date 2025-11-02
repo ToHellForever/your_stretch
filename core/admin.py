@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Profile, Gallery, GalleryImage, Banner
+from .models import Product, Profile, Gallery, GalleryImage, Banner, MobileBanner
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
@@ -25,4 +25,10 @@ class GalleryAdmin(admin.ModelAdmin):
 
 @admin.register(Banner)
 class BannerAdmin(admin.ModelAdmin):
+    list_display = ('id','image')
+    
+    
+    
+@admin.register(MobileBanner)
+class MobileBannerAdmin(admin.ModelAdmin):
     list_display = ('id','image')

@@ -55,11 +55,18 @@ class GalleryImage(models.Model):
         verbose_name_plural = 'Фотографии галереи'
 
 
-# модель для банеров в карусели
+# модель для банеров в карусели (десктоп)
 class Banner(models.Model):
     image = models.ImageField(upload_to='banners/', verbose_name='Картинка')
-    
+
     class Meta:
-        verbose_name = 'Баннер'
-        verbose_name_plural = 'Баннеры'
-        
+        verbose_name = 'Баннер (десктоп)'
+        verbose_name_plural = 'Баннеры (десктоп)'
+
+# модель для банеров в карусели (мобильные)
+class MobileBanner(models.Model):
+    image = models.ImageField(upload_to='mobile_banners/', verbose_name='Картинка')
+
+    class Meta:
+        verbose_name = 'Баннер (мобильный)'
+        verbose_name_plural = 'Баннеры (мобильные)'
