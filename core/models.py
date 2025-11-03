@@ -70,3 +70,35 @@ class MobileBanner(models.Model):
     class Meta:
         verbose_name = 'Баннер (мобильный)'
         verbose_name_plural = 'Баннеры (мобильные)'
+
+# модель для заказов натяжных потолков
+class Order(models.Model):
+    area = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Площадь потолка (м²)')
+    corners = models.IntegerField(verbose_name='Количество углов')
+    lights = models.IntegerField(verbose_name='Количество светильников')
+    pipes = models.IntegerField(verbose_name='Количество труб')
+    ceiling_type = models.CharField(max_length=255, verbose_name='Тип потолка')
+    comment = models.TextField(verbose_name='Комментарий', blank=True, null=True)
+    phone = models.CharField(max_length=20, verbose_name='Телефон')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
+
+    class Meta:
+        verbose_name = 'Заказ'
+        verbose_name_plural = 'Заказы'
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"Заказ #{self.id} от {self.created_at.strftime('%d.%m.%Y %H:%M')}"
+
+# модель для запросов обратного звонка
+class CallbackRequest(models.Model):
+    phone = models.CharField(max_length=20, verbose_name='Телефон')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
+
+    class Meta:
+        verbose_name = 'Запрос обратного звонка'
+        verbose_name_plural = 'Запросы обратного звонка'
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"Запрос #{self.id} от {self.created_at.strftime('%d.%m.%Y %H:%M')} - {self.phone}"

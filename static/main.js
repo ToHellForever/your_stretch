@@ -114,6 +114,44 @@ document.addEventListener('DOMContentLoaded', function () {
       closeModal();
     }
   });
+
+  // Обработка отправки номера телефона из модального окна
+  const modalButton = document.querySelector('.modal-button');
+  if (modalButton) {
+    modalButton.addEventListener('click', function() {
+      const phoneInput = document.querySelector('.form-input');
+      const phoneNumber = phoneInput.value.trim();
+
+      if (phoneNumber) {
+        // Отправляем номер телефона на сервер
+        const formData = new FormData();
+        formData.append('callback_phone', phoneNumber);
+
+        fetch(window.location.pathname, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.status === 'success') {
+            alert('Спасибо! Мы скоро свяжемся с вами по телефону: ' + phoneNumber);
+            closeModal();
+          } else {
+            alert('Ошибка: ' + data.message);
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Произошла ошибка при отправке номера телефона. Пожалуйста, попробуйте позже.');
+        });
+      } else {
+        alert('Пожалуйста, введите ваш номер телефона');
+      }
+    });
+  }
 });
 
 
@@ -148,4 +186,51 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.add('d-none');
         }
     });
+
+    // Обработка отправки формы заказа
+    const orderForm = document.getElementById('request-form');
+    if (orderForm) {
+        orderForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Проверяем только обязательное поле телефона
+            const phoneInput = document.getElementById('phone');
+            if (!phoneInput.value.trim()) {
+                alert('Пожалуйста, введите ваш номер телефона');
+                return;
+            }
+
+            // Получаем данные из формы
+            const formData = new FormData(orderForm);
+
+            // Отправляем данные на сервер
+            fetch(window.location.pathname, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    // Показываем сообщение об успехе
+                    document.getElementById('result-message').textContent = data.message;
+                    document.getElementById('form-result').style.display = 'block';
+
+                    // Скрываем форму
+                    orderForm.style.display = 'none';
+
+                    // Прокручиваем к результату
+                    document.getElementById('form-result').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert('Ошибка: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте позже.');
+            });
+        });
+    }
 });
