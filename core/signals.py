@@ -14,6 +14,8 @@ def send_telegram_notification(instance):
         tg_markdown_message = f"""
 🏠 *Новый заказ натяжных потолков!* 🏠
 
+📝 **Номер заказа:** #{instance.id}
+
 📏 **Площадь потолка:** {instance.area} м²
 🔳 **Количество углов:** {instance.corners} шт.
 💡 **Светильники:** {instance.lights} шт.
@@ -37,6 +39,8 @@ def send_callback_telegram_notification(instance):
         # Формируем сообщение для Telegram
         tg_markdown_message = f"""
 📞 *Новый запрос обратного звонка!* 📞
+
+📝 **Номер заказа:** #{instance.id}
 
 📱 **Телефон клиента:** {instance.phone}
 
