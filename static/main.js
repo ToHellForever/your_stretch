@@ -271,8 +271,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         notification.className = 'notification';
                     }, 5000);
 
-                    // Скрываем форму
-                    orderForm.style.display = 'none';
+                    // Очищаем форму вместо скрытия
+                    orderForm.reset();
                 } else {
                     notification.textContent = 'Ошибка: ' + data.message;
                     notification.className = 'notification notification-error show';
