@@ -136,19 +136,38 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(response => response.json())
         .then(data => {
+          const notification = document.getElementById('notification');
           if (data.status === 'success') {
-            alert('Спасибо! Мы скоро свяжемся с вами по телефону: ' + phoneNumber);
+            notification.textContent = 'Спасибо! Мы скоро свяжемся с вами по телефону: ' + phoneNumber;
+            notification.className = 'notification notification-success show';
+            setTimeout(() => {
+              notification.className = 'notification';
+            }, 5000);
             closeModal();
           } else {
-            alert('Ошибка: ' + data.message);
+            notification.textContent = 'Ошибка: ' + data.message;
+            notification.className = 'notification notification-error show';
+            setTimeout(() => {
+              notification.className = 'notification';
+            }, 5000);
           }
         })
         .catch(error => {
           console.error('Error:', error);
-          alert('Произошла ошибка при отправке номера телефона. Пожалуйста, попробуйте позже.');
+          const notification = document.getElementById('notification');
+          notification.textContent = 'Произошла ошибка при отправке номера телефона. Пожалуйста, попробуйте позже.';
+          notification.className = 'notification notification-error show';
+          setTimeout(() => {
+            notification.className = 'notification';
+          }, 5000);
         });
       } else {
-        alert('Пожалуйста, введите ваш номер телефона');
+        const notification = document.getElementById('notification');
+        notification.textContent = 'Пожалуйста, введите ваш номер телефона';
+        notification.className = 'notification notification-error show';
+        setTimeout(() => {
+          notification.className = 'notification';
+        }, 5000);
       }
     });
   }
@@ -196,7 +215,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Проверяем только обязательное поле телефона
             const phoneInput = document.getElementById('phone');
             if (!phoneInput.value.trim()) {
-                alert('Пожалуйста, введите ваш номер телефона');
+                const notification = document.getElementById('notification');
+                notification.textContent = 'Пожалуйста, введите ваш номер телефона';
+                notification.className = 'notification notification-error show';
+                setTimeout(() => {
+                    notification.className = 'notification';
+                }, 5000);
                 return;
             }
 
@@ -213,23 +237,33 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(response => response.json())
             .then(data => {
+                const notification = document.getElementById('notification');
                 if (data.status === 'success') {
                     // Показываем сообщение об успехе
-                    document.getElementById('result-message').textContent = data.message;
-                    document.getElementById('form-result').style.display = 'block';
+                    notification.textContent = data.message;
+                    notification.className = 'notification notification-success show';
+                    setTimeout(() => {
+                        notification.className = 'notification';
+                    }, 5000);
 
                     // Скрываем форму
                     orderForm.style.display = 'none';
-
-                    // Прокручиваем к результату
-                    document.getElementById('form-result').scrollIntoView({ behavior: 'smooth' });
                 } else {
-                    alert('Ошибка: ' + data.message);
+                    notification.textContent = 'Ошибка: ' + data.message;
+                    notification.className = 'notification notification-error show';
+                    setTimeout(() => {
+                        notification.className = 'notification';
+                    }, 5000);
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте позже.');
+                const notification = document.getElementById('notification');
+                notification.textContent = 'Произошла ошибка при отправке формы. Пожалуйста, попробуйте позже.';
+                notification.className = 'notification notification-error show';
+                setTimeout(() => {
+                    notification.className = 'notification';
+                }, 5000);
             });
         });
     }
