@@ -122,6 +122,17 @@ document.addEventListener('DOMContentLoaded', function () {
       const phoneInput = document.querySelector('.form-input');
       const phoneNumber = phoneInput.value.trim();
 
+      // Валидация номера телефона
+      const phoneRegex = /^\+?7\d{10}$/; // Формат: +7XXXXXXXXXX или 7XXXXXXXXXX
+      if (!phoneRegex.test(phoneNumber)) {
+        const notification = document.getElementById('notification');
+        notification.textContent = 'Пожалуйста, введите корректный номер телефона (например, +79991234567)';
+        notification.className = 'notification notification-error show';
+        setTimeout(() => {
+          notification.className = 'notification';
+        }, 5000);
+        return;
+      }
       if (phoneNumber) {
         // Отправляем номер телефона на сервер
         const formData = new FormData();
@@ -214,7 +225,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Проверяем только обязательное поле телефона
             const phoneInput = document.getElementById('phone');
-            if (!phoneInput.value.trim()) {
+            const phoneNumber = phoneInput.value.trim();
+
+            // Валидация номера телефона
+            const phoneRegex = /^\+?7\d{10}$/; // Формат: +7XXXXXXXXXX или 7XXXXXXXXXX
+            if (!phoneRegex.test(phoneNumber)) {
+                const notification = document.getElementById('notification');
+                notification.textContent = 'Пожалуйста, введите корректный номер телефона (например, +79991234567)';
+                notification.className = 'notification notification-error show';
+                setTimeout(() => {
+                    notification.className = 'notification';
+                }, 5000);
+                return;
+            }
+
+            if (!phoneNumber) {
                 const notification = document.getElementById('notification');
                 notification.textContent = 'Пожалуйста, введите ваш номер телефона';
                 notification.className = 'notification notification-error show';
