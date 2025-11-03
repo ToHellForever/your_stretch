@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
       prevEl: ".work-swiper-prev"
     },
     autoplay: {
-      delay: 5000, // Пауза между слайдами
+      delay: 3000, // Пауза между слайдами
       disableOnInteraction: false,
     }
   });

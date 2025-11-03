@@ -1,4 +1,68 @@
 /* БЛОК С КАРУСЕЛЬЮ */
+
+/* Стили для стрелок навигации карусели примеров работ */
+.work-swiper-next,
+.work-swiper-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.work-swiper-next {
+    right: -10px;
+}
+
+.work-swiper-prev {
+    left: -10px;
+}
+
+.work-swiper-next img,
+.work-swiper-prev img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Стили для стрелок навигации галереи */
+.gallery-swiper-next,
+.gallery-swiper-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.gallery-swiper-next {
+    right: -10px;
+}
+
+.gallery-swiper-prev {
+    left: -10px;
+}
+
+.gallery-swiper-next img,
+.gallery-swiper-prev img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+
 /* банеры в карусели */
 .img-carousel {
     width: 100%;
