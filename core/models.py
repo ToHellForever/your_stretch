@@ -57,7 +57,7 @@ class GalleryImage(models.Model):
 
 # модель для банеров в карусели (десктоп)
 class Banner(models.Model):
-    image = models.ImageField(upload_to='banners/', verbose_name='Картинка')
+    image = models.ImageField(upload_to='dekstop_banners/', verbose_name='Картинка')
 
     class Meta:
         verbose_name = 'Баннер (десктоп)'
@@ -70,7 +70,7 @@ class MobileBanner(models.Model):
     class Meta:
         verbose_name = 'Баннер (мобильный)'
         verbose_name_plural = 'Баннеры (мобильные)'
-
+#  poetry run python manage.py makemigrations 
 # модель для заказов натяжных потолков
 class Order(models.Model):
     area = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Площадь потолка (м²)')
