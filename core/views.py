@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.views.generic import TemplateView
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
+from django_ratelimit.decorators import ratelimit
 from .models import Product, Profile, Gallery, Banner, MobileBanner, Order, CallbackRequest
 import json
 from django.http import JsonResponse
@@ -20,6 +21,7 @@ class LandingView(TemplateView):
         return context
 
     @method_decorator(csrf_exempt)
+    @method_decorator(ratelimit(key='ip', rate='3/m', method='POST', block=True))
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)
 
