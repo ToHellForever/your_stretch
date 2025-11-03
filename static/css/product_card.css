@@ -79,3 +79,11 @@
         font-size: 1rem;
     }
 }
+
+/* разрешение свыше 2500px */
+@media (min-width: 2500px) {
+    .product-image {
+        width: 90%;
+        height: 16rem;
+    }
+}

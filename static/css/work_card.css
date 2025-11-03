@@ -100,3 +100,11 @@ text-align: start;
     text-align: center;
   }
 }
+
+
+@media (min-width: 2500px) {
+  .work-image {
+        width: 90%;
+        height: 16rem;
+}
+}
