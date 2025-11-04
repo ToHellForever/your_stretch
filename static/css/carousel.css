@@ -132,3 +132,9 @@ opacity: 0.5;
   height: auto;
 }
 }
+
+@media (max-width: 767px) {
+  .img-carousel {
+    margin-top: 5rem;
+  }
+}
