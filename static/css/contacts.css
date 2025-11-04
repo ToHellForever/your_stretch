@@ -22,7 +22,7 @@ h5 {
     text-align: center;
     color: black;
     margin: 0;
-    display: block; /* Добавлено для гарантии отображения в блок */
+    display: block; 
 }
 
 .contact-container {
@@ -32,8 +32,10 @@ h5 {
     height: auto;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
     margin-bottom: 0 !important;
+    width: 100%;
+    background-image: url(/media/bg_contact.png);
+    background-size: cover;
 }
 
 .centered-box {
@@ -46,51 +48,34 @@ h5 {
 }
 
 /* Для мобильных устройств */
-@media (max-width: 768px) {
+@media (max-width: 810px) {
     h5 {
         font-size: 1.5rem;
         margin-bottom: 10px;
     }
 
     .centered-box {
-            padding: 2rem !important;
-    margin: 30px;
+    padding: 2rem !important;
+    margin: 1rem;
     }
 
     .contact-container {
         height: auto;
+        padding: 2rem;
     }
 
     .contact-text {
         font-size: 1rem;
         display: block;
-        margin-bottom: 5px; /* Добавлен отступ между строками */
+        margin-bottom: 5px; 
     }
 
-    /* Специальные стили для каждой строки контактов */
-    .contact-text:nth-child(1) {
-        margin-top: 10px; /* Отступ сверху для первой строки */
-    }
-
-    .contact-text:nth-child(2) {
-        margin-bottom: 5px; /* Отступ снизу для второй строки */
-    }
-
-    .contact-text:nth-child(3) {
-        margin-bottom: 5px; /* Отступ снизу для третьей строки */
-    }
-
-    .contact-text:nth-child(4) {
-        margin-bottom: 5px; /* Отступ снизу для четвертой строки */
-    }
 }
 
-@media (min-width: 760px) and (max-width: 1216px) {
-  .centered-box {
-    padding: 2rem !important;
-    margin: 50px;
-  }
-  .contact-container {
-    height: auto;
+
+@media (max-width: 987px) {
+      .contact-text2 {
+    display: block; 
+    white-space: normal; 
   }
 }
