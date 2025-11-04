@@ -43,11 +43,11 @@
 }
 .mobile-menu {
   position: fixed;
-  top: 0; 
-  width: 100%; 
+  top: 0;
+  width: 100%;
   background: white;
-  z-index: 9999; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 /* иконки контактов шапке */
 .contact_icon {

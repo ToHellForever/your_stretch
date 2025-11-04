@@ -134,9 +134,9 @@
 </div>
 
 {% comment %} block1 с 6 иконками {% endcomment %}
-<div class='container' style='margin-top: 50px'>
+<div class='container container-fluid-md' style='margin-top: 50px'>
   <h1>ПОЧЕМУ МЫ?</h1>
-  <div class='row' style='align-items: stretch;'>
+  <div class='row' style='align-items: stretch; margin-top: 2rem;'>
       <div class='col-4' style='display: flex; flex-direction: column;'>
         <img src="media/icons/block1/дизайн.svg" alt="" class='icon-block1'>
         <p class='block1-head'>Индивидуальный дизайн</p>
@@ -281,11 +281,11 @@
   </div>
 
   <!-- Мобильная версия (карусель) -->
-  <div class="d-md-none mt-3">
+  <div class="d-md-none">
     <div class="swiper work-swiper-mobile">
       <div class="swiper-wrapper">
         {% for work in profiles %}
-        <div class="swiper-slide">
+        <div class="swiper-slide work-swiper-slide">
           <div class='work-card'>
             <img src="{{ work.image.url }}" class='work-image' alt="{{ work.title }}">
             <div class="work-details-container">
@@ -342,12 +342,12 @@
   </div>
 
   <!-- Мобильная версия (карусель) -->
-  <div class="d-md-none mt-4">
+  <div class="d-md-none">
     <div class="swiper gallery-swiper-mobile">
       <div class="swiper-wrapper">
         {% for gallery in galleries %}
           {% for image in gallery.images.all|slice:"0:20" %}
-            <div class="swiper-slide">
+            <div class="swiper-slide gallery-swiper-slide">
               <div class="card">
                 <img src="{{ image.image.url }}" alt="Фото из галереи" class="card-img-top">
               </div>
@@ -363,10 +363,10 @@
 </div>
 
 {% comment %} БЛОК Преимущества натяжных потолков {% endcomment %}
-<div class='container-fluid mt-5' style='background-color: rgba(41, 37, 73, 1); margin-top: 150px !important;'>
+<div class='container-fluid mt-5' style='background-color: rgba(41, 37, 73, 1);'>
   <div class='container'>
     <div class='row' style='align-items: stretch;'>
-      <h4 style='margin-top: 5vw;'>ПРЕИМУЩЕСТВА НАТЯЖНЫХ ПОТОЛКОВ</h4>
+      <h4 style='margin-top: 2rem;'>ПРЕИМУЩЕСТВА НАТЯЖНЫХ ПОТОЛКОВ</h4>
     <div class='col-4 block2' style='display: flex; flex-direction: column;'>
       <img src="media/icons/block2/текстур.svg" alt="" class='icon-block2'>
       <p class='block2-head'>Разнообразие текстур</p3>
@@ -436,7 +436,7 @@
 </div>
 
 {% comment %} блок с модальным окном {% endcomment %}
-<div class="modal overlay" id="callback-modal" tabindex="-1" role="dialog" aria-labelledby="callbackModalLabel" inert>
+<div class="modal overlay" id="callback-modal" tabindex="-1" role="dialog" aria-labelledby="callbackModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <button type="button" class="close-modal" aria-label="Close">
@@ -446,7 +446,7 @@
         <h6 class="modal-title">Есть вопросы?</h6>
         <h6 class="modal-title">Закажи обратный звонок!</h6>
         <p class='modal-text mt-4'>Мы позвоним и ответим на все вопросы.</p>
-        <input type="tel" class="form-input" placeholder="Напишите ваш номер" />
+        <input type="tel" class="form-input" id="callback_phone" name="callback_phone" placeholder="Напишите ваш номер">
         <button class="modal-button">Отправить</button>
         <p class='modal-text mt-3'>Или свяжитесь с нами</p>
         <p class='modal-text'>+7 964 650 03 02</p>

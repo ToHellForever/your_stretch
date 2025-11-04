@@ -127,13 +127,18 @@ opacity: 0.5;
     width: 2rem;
     height: 2rem;
   }
-  .swiper-slide-active {
-  transform: none !important;
-  height: auto;
 }
-}
+
 @media (max-width: 768px) {
   .swiper-slide {
     margin-top: 5rem;
+  }
+    .swiper-slide-active {
+  transform: none !important;
+  height: auto;
+    }
+  .work-swiper-slide,
+  .gallery-swiper-slide {
+    margin-top: 0.5rem;
   }
 }

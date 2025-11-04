@@ -61,7 +61,7 @@
   background: rgba(255, 255, 255, 1);
   font-size: 1.3rem;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px !important;
   border: none;
   text-align: center;
 }

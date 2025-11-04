@@ -1,4 +1,26 @@
-/* BLOCK1 С 6 ИКОНКАМИ */
+@media (max-width: 990px) {
+    .container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 90%;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 770px) {
+    .block1-text {
+        font-size: 1rem !important;
+    }
+    .block2-text {
+        font-size: 1rem !important;
+    }
+    .block2-head {
+        font-size: 1rem !important;
+    }
+    .block2-text {
+        font-size: 1rem !important;
+    }
+}
 h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
@@ -6,6 +28,8 @@ h1 {
     text-align: center;
     color:rgba(41, 37, 73, 1);
 }
+
+/* BLOCK1 С 6 ИКОНКАМИ */
 
 /* для колонок */
 .col-4 {
@@ -80,7 +104,18 @@ h4 {
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        margin-bottom: 0px !important;
+    }
+    .icon-block1 {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-left: 0px !important;
+    }
+    .icon-block2 {
+        width: 5rem;
+        height: 5rem;
+        margin-left: 0px !important;
     }
     .block1-head {
         font-size: 1.1rem;
@@ -88,15 +123,15 @@ h4 {
         margin-top: 20px;
     }
     .block2-head {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         white-space: wrap; 
         margin-top: 20px;
     }
     .block1-text {
-        font-size: 1rem !important;
+        font-size: 0.8rem !important;
     }
     .block2-text {
-        font-size: 1rem !important;
+        font-size: 0.8rem !important;
     }
     .col-4 {
         flex: 0 0 50%;
@@ -109,7 +144,7 @@ h4 {
     }
     .col-4.block2 {
         margin-top: 10px;
-        padding: 5px;
+        padding: 10px;
     }
 }
 
