@@ -13,7 +13,7 @@ class LandingView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['banners'] = Banner.objects.all()
+        context['dekstop_banners'] = Banner.objects.all()
         context['mobile_banners'] = MobileBanner.objects.all()
         context['products'] = Product.objects.all()
         context['profiles'] = Profile.objects.all()

@@ -124,17 +124,16 @@ opacity: 0.5;
 
 @media (max-width: 992px) {
   .swiper-slide-nav img {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2rem;
+    height: 2rem;
   }
   .swiper-slide-active {
   transform: none !important;
   height: auto;
 }
 }
-
-@media (max-width: 767px) {
-  .img-carousel {
+@media (max-width: 768px) {
+  .swiper-slide {
     margin-top: 5rem;
   }
 }
