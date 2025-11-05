@@ -58,17 +58,20 @@ document.addEventListener("DOMContentLoaded", function() {
   // Добавляем обработчики событий для кнопок навигации внутри слайдов
   document.querySelectorAll('.swiper-slide-prev').forEach(button => {
     button.addEventListener('click', function() {
-      swiper.slidePrev();
+      // Используем правильный экземпляр Swiper
+      const swiperInstance = document.querySelector('.mySwiper').swiper;
+      swiperInstance.slidePrev();
     });
   });
 
   document.querySelectorAll('.swiper-slide-next').forEach(button => {
     button.addEventListener('click', function() {
-      swiper.slideNext();
+      // Используем правильный экземпляр Swiper
+      const swiperInstance = document.querySelector('.mySwiper').swiper;
+      swiperInstance.slideNext();
     });
   });
 });
-
 
 // для модального окна
 document.addEventListener('DOMContentLoaded', function () {
@@ -79,19 +82,19 @@ document.addEventListener('DOMContentLoaded', function () {
   // Функция для открытия модального окна
   function openModal() {
     modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; 
+    document.body.style.overflow = 'hidden';
   }
 
   // Функция для закрытия модального окна
   function closeModal() {
     modal.style.display = 'none';
-    document.body.style.overflow = 'auto'; 
+    document.body.style.overflow = 'auto';
   }
 
   // Открытие модального окна по кнопке
   openButtons.forEach(button => {
     button.addEventListener('click', function(e) {
-      e.preventDefault(); 
+      e.preventDefault();
       openModal();
     });
   });
@@ -183,7 +186,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const burger = document.getElementById('burger');
