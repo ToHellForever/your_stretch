@@ -29,20 +29,39 @@ class LandingView(TemplateView):
         try:
             # Обработка формы заказа натяжных потолков
             if 'phone' in request.POST and 'area' in request.POST:
-                area = request.POST.get('area', 0)
-                corners = request.POST.get('corners', 0)
-                lights = request.POST.get('lights', 0)
-                pipes = request.POST.get('pipes', 0)
-                ceiling_type = request.POST.get('ceiling_type', '')
-                comment = request.POST.get('comment', '')
+                area = request.POST.get('area', '0')  # Устанавливаем значение по умолчанию
+                corners = request.POST.get('corners', '0')  # Устанавливаем значение по умолчанию
+                lights = request.POST.get('lights', '0')  # Устанавливаем значение по умолчанию
+                pipes = request.POST.get('pipes', '0')  # Устанавливаем значение по умолчанию
+                ceiling_type = request.POST.get('ceiling_type', 'Не указан')  # Устанавливаем значение по умолчанию
+                comment = request.POST.get('comment', '')  # Устанавливаем значение по умолчанию
                 phone = request.POST.get('phone')
+
+                # Проверяем, что телефон не пустой
+                if not phone:
+                    return JsonResponse({
+                        'status': 'error',
+                        'message': 'Пожалуйста, укажите ваш телефон.'
+                    }, status=400)
+
+                from decimal import Decimal, InvalidOperation
+
+                # Преобразуем значения в корректные типы
+                try:
+                    area_value = Decimal(area) if area else 0
+                except InvalidOperation:
+                    area_value = 0
+
+                corners_value = int(corners) if corners else 0
+                lights_value = int(lights) if lights else 0
+                pipes_value = int(pipes) if pipes else 0
 
                 # Создаем новый заказ
                 order = Order.objects.create(
-                    area=area or 0,
-                    corners=corners or 0,
-                    lights=lights or 0,
-                    pipes=pipes or 0,
+                    area=area_value,
+                    corners=corners_value,
+                    lights=lights_value,
+                    pipes=pipes_value,
                     ceiling_type=ceiling_type or 'Не указан',
                     comment=comment,
                     phone=phone
@@ -57,6 +76,13 @@ class LandingView(TemplateView):
             # Обработка запроса обратного звонка
             elif 'callback_phone' in request.POST:
                 phone = request.POST.get('callback_phone')
+
+                # Проверяем, что телефон не пустой
+                if not phone:
+                    return JsonResponse({
+                        'status': 'error',
+                        'message': 'Пожалуйста, укажите ваш телефон.'
+                    }, status=400)
 
                 # Создаем запрос обратного звонка
                 callback = CallbackRequest.objects.create(phone=phone)

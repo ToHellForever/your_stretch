@@ -7,7 +7,7 @@ from core.views import (
     LandingView, 
     )
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('z3rxp8hLmkJqXvBw/', admin.site.urls),
     path('', LandingView.as_view(), name='landing'),
 ] + debug_toolbar_urls()
 

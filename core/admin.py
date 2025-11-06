@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Product, Profile, Gallery, GalleryImage, Banner, MobileBanner
+from decimal import InvalidOperation
+from .models import Product, Profile, Gallery, GalleryImage, Banner, MobileBanner, Order, CallbackRequest
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
@@ -32,3 +33,22 @@ class BannerAdmin(admin.ModelAdmin):
 @admin.register(MobileBanner)
 class MobileBannerAdmin(admin.ModelAdmin):
     list_display = ('id','image')
+
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ('id', 'safe_area', 'corners', 'lights', 'pipes', 'ceiling_type', 'phone', 'created_at')
+    list_filter = ('ceiling_type', 'created_at')
+    search_fields = ('phone', 'comment')
+
+    def safe_area(self, obj):
+        try:
+            return obj.area
+        except (ValueError, TypeError, InvalidOperation):
+            return "Некорректное значение"
+    safe_area.short_description = 'Площадь потолка (м²)'
+    safe_area.admin_order_field = 'area'
+
+@admin.register(CallbackRequest)
+class CallbackRequestAdmin(admin.ModelAdmin):
+    list_display = ('id', 'phone', 'created_at')
+    search_fields = ('phone',)

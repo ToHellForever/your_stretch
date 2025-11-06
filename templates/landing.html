@@ -179,11 +179,13 @@
         <div class='product-card'>
           <img src="{{ product.image.url }}" class='product-image' alt="{{ product.title }}">
           <h3 class='product-title'>{{ product.title }}</h3>
-          {% comment %} оставить только основной ценник без цифр после запятй {% endcomment %}
-          <p class='product-price'>от {{ product.price|floatformat:0 }} руб./м²</p>
-            {% comment %} ссылка на форму {% endcomment %}
-            <button class='product-button' type=" button" href="#request-form"><a href="#request-form" class='product-link'>Заказать замер</a></button>
-          </div>
+          {% if product.price %}
+            <p class='product-price'>от {{ product.price|floatformat:0 }} руб./м²</p>
+          {% else %}
+            <p class='product-price'>Цена не указана</p>
+          {% endif %}
+          <button class='product-button' type="button"><a href="#request-form" class='product-link'>Заказать замер</a></button>
+        </div>
       </div>
     {% endfor %}
   </div>
