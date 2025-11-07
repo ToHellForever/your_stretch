@@ -1,56 +1,101 @@
 [
   {
     "model": "core.product",
-    "pk": 1,
+    "pk": 7,
     "fields": {
-      "image": "images/5453954991397139178.jpg",
-      "title": "Белый потолок",
+      "image": "images/5453954991397139178_m9YQw2x.jpg",
+      "title": "Белый  потолок",
       "price": "650.00"
     }
   },
   {
     "model": "core.product",
-    "pk": 2,
+    "pk": 8,
     "fields": {
-      "image": "images/5453954991397139531.jpg",
-      "title": "Цветной потолок",
+      "image": "images/WhatsApp_Image_2025-10-20_at_15.16.28.jpeg",
+      "title": "Черный  потолок",
       "price": "650.00"
     }
   },
   {
     "model": "core.product",
-    "pk": 3,
+    "pk": 9,
     "fields": {
-      "image": "images/5453954991397139272.jpg",
+      "image": "images/5453954991397139531_4uGNSdz.jpg",
+      "title": "Цветной  потолок",
+      "price": "650.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 10,
+    "fields": {
+      "image": "images/5453954991397139272_4cq0m5n.jpg",
       "title": "С фотопечатью",
       "price": "650.00"
     }
   },
   {
     "model": "core.product",
-    "pk": 4,
+    "pk": 11,
     "fields": {
-      "image": "images/5453954991397139275.jpg",
+      "image": "images/5453954991397139275_KoyKJBt.jpg",
       "title": "3д потолок",
       "price": "650.00"
     }
   },
   {
     "model": "core.product",
-    "pk": 5,
+    "pk": 12,
     "fields": {
-      "image": "images/5453954991397139217.jpg",
+      "image": "images/5453954991397139217_jD61qkk.jpg",
       "title": "Звёздное небо",
       "price": "990.00"
     }
   },
   {
     "model": "core.product",
-    "pk": 6,
+    "pk": 13,
     "fields": {
-      "image": "images/5451939268755847371.jpg",
+      "image": "images/5451939268755847371_4WrVqam.jpg",
       "title": "Световые линии",
       "price": "3000.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 14,
+    "fields": {
+      "image": "images/5453954991397139346.jpg",
+      "title": "Бесшовные",
+      "price": "600.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 15,
+    "fields": {
+      "image": "images/5453954991397139327.jpg",
+      "title": "Парящие",
+      "price": "990.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 16,
+    "fields": {
+      "image": "images/5453954991397139337.jpg",
+      "title": "Многоуровневые",
+      "price": "1500.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 17,
+    "fields": {
+      "image": "images/5453954991397139412_1.png",
+      "title": "С контурной подстветкой",
+      "price": "600.00"
     }
   },
   {
@@ -140,18 +185,18 @@
   },
   {
     "model": "core.banner",
-    "pk": 13,
+    "pk": 16,
     "fields": { "image": "dekstop_banners/slide3.png" }
   },
   {
     "model": "core.banner",
-    "pk": 14,
-    "fields": { "image": "dekstop_banners/slide2.png" }
+    "pk": 17,
+    "fields": { "image": "dekstop_banners/slide1.png" }
   },
   {
     "model": "core.banner",
-    "pk": 15,
-    "fields": { "image": "dekstop_banners/slide1.png" }
+    "pk": 18,
+    "fields": { "image": "dekstop_banners/slide2.png" }
   },
   {
     "model": "core.mobilebanner",
