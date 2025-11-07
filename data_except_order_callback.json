@@ -1,0 +1,33 @@
+[
+  {
+    "model": "core.banner",
+    "pk": 16,
+    "fields": { "image": "dekstop_banners/slide3.png" }
+  },
+  {
+    "model": "core.banner",
+    "pk": 17,
+    "fields": { "image": "dekstop_banners/slide1.png" }
+  },
+  {
+    "model": "core.banner",
+    "pk": 18,
+    "fields": { "image": "dekstop_banners/slide2.png" }
+  },
+  { "model": "core.gallery", "pk": 1, "fields": { "name": null } },
+  {
+    "model": "core.mobilebanner",
+    "pk": 9,
+    "fields": { "image": "mobile_banners/image_00aegLT.png" }
+  },
+  {
+    "model": "core.mobilebanner",
+    "pk": 10,
+    "fields": { "image": "mobile_banners/image_3O7yyAy.png" }
+  },
+  {
+    "model": "core.mobilebanner",
+    "pk": 11,
+    "fields": { "image": "mobile_banners/image_zVHzx2x.png" }
+  }
+]
