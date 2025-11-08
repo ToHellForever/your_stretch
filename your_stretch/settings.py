@@ -29,9 +29,11 @@ TELEGRAM_USER_ID = os.getenv("TELEGRAM_USER_ID")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG_MODE', 'True') == 'True'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+# НА КАКИХ ХОСТАХ МОЖЕТ РАБОТАТЬ 
+ALLOWED_HOSTS = []
 
-# Application definition
+# ОТКУДА ПРИНИМАЮТСЯ CSRF ЗАПРОСЫ
+CSRF_TRUSTED_ORIGINS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
