@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'core',
 ]
-
+# 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
