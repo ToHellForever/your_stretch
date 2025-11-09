@@ -41,7 +41,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://195.80.51.20",
     "https://195.80.51.20",
 ]
-# 
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
