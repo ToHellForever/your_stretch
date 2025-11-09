@@ -30,8 +30,8 @@ jobs:
             # Переходим в директорию проекта
             cd /home/x/your_stretch
 
-            # Останавливаем службу приложения Gunicorn (с sudo и передачей пароля)
-            echo "${{ secrets.PASSWORD }}" | sudo -S systemctl stop gunicorn_your_stretch
+            # Останавливаем службу приложения  (с sudo и передачей пароля)
+            echo "${{ secrets.PASSWORD }}" | sudo -S systemctl stop your_stretch
 
             # Обновляем код из репозитория (с sudo и передачей пароля)
             echo "${{ secrets.PASSWORD }}" | git pull
@@ -43,30 +43,5 @@ jobs:
             # Обновляем зависимости
             # pip install -r requirements.txt
 
-            # Если у вас Poetry (Можно определить путь до poetry which poetry)
-            /home/x/.local/bin/poetry install --no-root 
-
-            # Применяем миграции для обновления структуры базы данных
-            /home/x/.local/bin/poetry run python manage.py migrate
-
-            # Создаем файл .env из секрета где записано все его содержимое
-            echo "${{ secrets.ENV_FILE }}" > .env
-
-            # Собираем статику в указанную директорию (STATIC_ROOT)
-            # Флаг --noinput предотвращает запрос подтверждения
-            /home/x/.local/bin/poetry run python manage.py collectstatic --noinput
-
-            # Перезапускаем службу Gunicorn
-            echo "${{ secrets.PASSWORD }}" | sudo -S systemctl start gunicorn_your_stretch
-
-            # Перезагружаем демоны systemd, чтобы они увидели новый файл службы
-            sudo systemctl daemon-reload
-
-            # Отключаем старую службу your_stretch, чтобы она больше не запускалась при старте системы
-            sudo systemctl disable your_stretch
-
-            # Включаем новую службу gunicorn_your_stretch, чтобы она запускалась автоматически
-            sudo systemctl enable gunicorn_your_stretch
-
-            # Запускаем службу Gunicorn
-            sudo systemctl start gunicorn_your_stretch
+            # Если у вас Poetry
+            /home/x/.local/bin/poetry install --no-root
