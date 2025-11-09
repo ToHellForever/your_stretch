@@ -125,18 +125,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = "/static/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
-# Media files
+# Указали путь к статическим файлам в проекте. Это адрес на сервере, по которому будут доступны статические файлы
+STATIC_URL = "static/"
+# Указали путь к папке, где будут храниться статические файлы при сборке проекта
+STATIC_ROOT = BASE_DIR / "staticfiles"
+# Указали путь к папке, где будут храниться статические файлы
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+# Настройки для медиа-файлов (загружаемые пользователями)
+# URL-путь для доступа к медиа файлам
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Физический путь хранения файлов на сервере
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Debug Toolbar settings
 INTERNAL_IPS = [
