@@ -30,10 +30,17 @@ TELEGRAM_USER_ID = os.getenv("TELEGRAM_USER_ID")
 DEBUG = os.getenv('DEBUG_MODE', 'True') == 'True'
 
 # НА КАКИХ ХОСТАХ МОЖЕТ РАБОТАТЬ 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "195.80.51.20",
+    "localhost",
+    "127.0.0.1",
+    ]
 
 # ОТКУДА ПРИНИМАЮТСЯ CSRF ЗАПРОСЫ
-CSRF_TRUSTED_ORIGINS = []
+CSRF_TRUSTED_ORIGINS = [
+    "http://195.80.51.20",
+    "https://195.80.51.20",
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
