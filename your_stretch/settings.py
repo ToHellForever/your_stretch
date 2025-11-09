@@ -81,7 +81,7 @@ TEMPLATES = [
         },
     },
 ]
-# 
+
 WSGI_APPLICATION = 'your_stretch.wsgi.application'
 
 # Database
