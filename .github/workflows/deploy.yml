@@ -1,51 +1,60 @@
+# Название нашего workflow для отображения в интерфейсе GitHub
 name: Deploy to VPS
 
+# Указываем когда запускать - при push в main ветку
 on:
   push:
     branches: [main]
 
+# Определяем задачи для выполнения
 jobs:
   deploy:
+    # Указываем на какой ОС запускать
     runs-on: ubuntu-latest
 
     steps:
+      # Получаем код из репозитория
       - uses: actions/checkout@v3
 
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.5.3
+      # Деплоим на сервер через SSH
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@master
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Deploy to VPS via SSH
-        uses: appleboy/ssh-action@v0.2.0
-        with:
+          # Используем секреты из GitHub для подключения
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          
-          # Не указываем password, используем SSH ключ
-          
-          # Команды на сервере
+          password: ${{ secrets.PASSWORD }}
+
+          # Команды выполняемые на сервере
           script: |
-            # Перейти в нужную директорию
+            # Переходим в директорию проекта
             cd /home/x/your_stretch
 
-            # Останавливаем службу Gunicorn
-            sudo systemctl stop gunicorn_your_stretch
+            # Останавливаем службу приложения Gunicorn (с sudo и передачей пароля)
+            echo "${{ secrets.PASSWORD }}" | sudo -S systemctl stop gunicorn_your_stretch
 
-            # Обновляем код (если репозиторий уже клонен)
-            git pull
+            # Обновляем код из репозитория (с sudo и передачей пароля)
+            echo "${{ secrets.PASSWORD }}" | git pull
 
-            # Установка зависимостей
-            /home/x/.local/bin/poetry install --no-root
+            # Если у вас PIP
+            # Активируем виртуальное окружение
+            # source venv/bin/activate
 
-            # Миграции
+            # Обновляем зависимости
+            # pip install -r requirements.txt
+
+            # Если у вас Poetry (Можно определить путь до poetry which poetry)
+            /home/x/.local/bin/poetry install --no-root 
+
+            # Применяем миграции для обновления структуры базы данных
             /home/x/.local/bin/poetry run python manage.py migrate
 
-            # Обновляем .env
+            # Создаем файл .env из секрета где записано все его содержимое
             echo "${{ secrets.ENV_FILE }}" > .env
 
-            # Собираем статику
+            # Собираем статику в указанную директорию (STATIC_ROOT)
+            # Флаг --noinput предотвращает запрос подтверждения
             /home/x/.local/bin/poetry run python manage.py collectstatic --noinput
 
-            # Перезапускаем Gunicorn
-            sudo systemctl start gunicorn_your_stretch
+            # Перезапускаем службу Gunicorn
+            echo "${{ secrets.PASSWORD }}" | sudo -S systemctl start gunicorn_your_stretch
