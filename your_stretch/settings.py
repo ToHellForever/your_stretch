@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 TELEGRAM_BOT_API_KEY = os.getenv("TELEGRAM_BOT_API_KEY")
 TELEGRAM_USER_ID = os.getenv("TELEGRAM_USER_ID")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG_MODE = False
+DEBUG = False
 
 # НА КАКИХ ХОСТАХ МОЖЕТ РАБОТАТЬ 
 ALLOWED_HOSTS = [
