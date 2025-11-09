@@ -1,55 +1,53 @@
-# Название нашего workflow для отображения в интерфейсе GitHub
 name: Deploy to VPS
 
-# Указываем когда запускать - при push в main ветку
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
-# Определяем задачи для выполнения 
 jobs:
   deploy:
-    # Указываем на какой ОС запускать
     runs-on: ubuntu-latest
 
     steps:
-      # Получаем код из репозитория
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      # Деплоим на сервер через SSH
-      - name: Deploy to VPS
-        uses: appleboy/ssh-action@master
+      - name: Set up SSH agent
+        uses: webfactory/ssh-agent@v0.5.3
         with:
-          # Используем секреты из GitHub для подключения
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-          # Команды выполняемые на сервере
+      - name: Deploy to VPS via SSH
+        uses: appleboy/ssh-action@v0.2.0
+        with:
+          host: ${{ secrets.HOST }}               # IP или доменное имя сервера
+          username: ${{ secrets.USERNAME }}       # ваше имя пользователя
+          
+          # дыхание: Секрет содержит приватный ключ
+          
+          # Замените пути и команды под ваши нужды
           script: |
-            # Переходим в директорию проекта
-            cd /home/x/your_stratch
+            # Перейти в директорию проекта
+            cd /home/x/your_stretch
 
-            # Останавливаем службу приложения  (с sudo и передачей пароля)
-            echo "${{ secrets.PASSWORD }}" | sudo -S systemctl stop your_stratch
+            # Остановить службу gunicorn
+            sudo /bin/systemctl stop gunicorn_your_stretch
 
-            # Обновляем код из репозитория (с sudo и передачей пароля)
-            echo "${{ secrets.PASSWORD }}" | git pull
+            # Обновить репозиторий
+            git pull origin main
 
-            # Если у вас PIP
-            # Активируем виртуальное окружение
-            # source venv/bin/activate
-
-            # Обновляем зависимости
-            # pip install -r requirements.txt
-
-            # Если у вас Poetry
+            # Установка зависимостей
             /home/x/.local/bin/poetry install --no-root
 
-            # Тут можно добавить команду для создания миграций
+            # Миграции базы данных
+            /home/x/.local/bin/poetry run python manage.py migrate
 
-            # Создаем файл .env из секрета где записано все его содержимое
+            # Обновить файл .env (сюда вставьте все переменные окружения)
             echo "${{ secrets.ENV_FILE }}" > .env
 
-            # Перезапускаем systemd сервис (с sudo и передачей пароля)
-            echo "${{ secrets.PASSWORD }}" | sudo -S systemctl start your_stratch
+            # Собрать статику
+            /home/x/.local/bin/poetry run python manage.py collectstatic --noinput
+
+            # Запустить службу gunicorn
+            sudo /bin/systemctl start gunicorn_your_stretch
