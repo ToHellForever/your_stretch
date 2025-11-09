@@ -1,0 +1,216 @@
+[
+  {
+    "model": "core.banner",
+    "pk": 16,
+    "fields": { "image": "dekstop_banners/slide3.png" }
+  },
+  {
+    "model": "core.banner",
+    "pk": 17,
+    "fields": { "image": "dekstop_banners/slide1.png" }
+  },
+  {
+    "model": "core.banner",
+    "pk": 18,
+    "fields": { "image": "dekstop_banners/slide2.png" }
+  },
+  { "model": "core.gallery", "pk": 1, "fields": { "name": null } },
+  {
+    "model": "core.product",
+    "pk": 7,
+    "fields": {
+      "image": "images/5453954991397139178_m9YQw2x.jpg",
+      "title": "Белый  потолок",
+      "price": "650.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 8,
+    "fields": {
+      "image": "images/WhatsApp_Image_2025-10-20_at_15.16.28.jpeg",
+      "title": "Черный  потолок",
+      "price": "650.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 9,
+    "fields": {
+      "image": "images/5453954991397139531_4uGNSdz.jpg",
+      "title": "Цветной  потолок",
+      "price": "650.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 10,
+    "fields": {
+      "image": "images/5453954991397139272_4cq0m5n.jpg",
+      "title": "С фотопечатью",
+      "price": "650.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 11,
+    "fields": {
+      "image": "images/5453954991397139275_KoyKJBt.jpg",
+      "title": "3д потолок",
+      "price": "650.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 12,
+    "fields": {
+      "image": "images/5453954991397139217_jD61qkk.jpg",
+      "title": "Звёздное небо",
+      "price": "990.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 13,
+    "fields": {
+      "image": "images/5451939268755847371_4WrVqam.jpg",
+      "title": "Световые линии",
+      "price": "3000.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 14,
+    "fields": {
+      "image": "images/5453954991397139346.jpg",
+      "title": "Бесшовные",
+      "price": "600.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 15,
+    "fields": {
+      "image": "images/5453954991397139327.jpg",
+      "title": "Парящие",
+      "price": "990.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 16,
+    "fields": {
+      "image": "images/5453954991397139337.jpg",
+      "title": "Многоуровневые",
+      "price": "1500.00"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 17,
+    "fields": {
+      "image": "images/5453954991397139412_1.png",
+      "title": "С контурной подстветкой",
+      "price": "600.00"
+    }
+  },
+  {
+    "model": "core.profile",
+    "pk": 1,
+    "fields": {
+      "image": "images/9011a1a3-df7c-430d-9d02-c547f2a5eb2a.jpeg",
+      "name": "Парящий натяжной потолок в гостиную",
+      "area": "13.00",
+      "angles": 5,
+      "profile": "аллюм.",
+      "price": "10200.00"
+    }
+  },
+  {
+    "model": "core.profile",
+    "pk": 2,
+    "fields": {
+      "image": "images/52305561-3873-4ed4-b543-4d0d21e73702.jpeg",
+      "name": "Трековый натяжной потолок в кухню",
+      "area": "18.00",
+      "angles": 6,
+      "profile": "аллюм.",
+      "price": "16700.00"
+    }
+  },
+  {
+    "model": "core.profile",
+    "pk": 3,
+    "fields": {
+      "image": "images/WhatsApp_Image_2025-10-20_at_15.16.28_1.jpeg",
+      "name": "Белый матовый потолок  в прихожую",
+      "area": "5.00",
+      "angles": 7,
+      "profile": "пластик",
+      "price": "7300.00"
+    }
+  },
+  {
+    "model": "core.galleryimage",
+    "pk": 1,
+    "fields": {
+      "gallery": 1,
+      "image": "gallery_images/WhatsApp_Image_2025-10-20_at_15.16.29.jpeg"
+    }
+  },
+  {
+    "model": "core.galleryimage",
+    "pk": 2,
+    "fields": {
+      "gallery": 1,
+      "image": "gallery_images/WhatsApp_Image_2025-10-20_at_15.16.28_1.jpeg"
+    }
+  },
+  {
+    "model": "core.galleryimage",
+    "pk": 3,
+    "fields": {
+      "gallery": 1,
+      "image": "gallery_images/WhatsApp_Image_2025-10-20_at_15.16.28.jpeg"
+    }
+  },
+  {
+    "model": "core.galleryimage",
+    "pk": 4,
+    "fields": {
+      "gallery": 1,
+      "image": "gallery_images/WhatsApp_Image_2025-10-20_at_15.16.27_1.jpeg"
+    }
+  },
+  {
+    "model": "core.galleryimage",
+    "pk": 5,
+    "fields": {
+      "gallery": 1,
+      "image": "gallery_images/52305561-3873-4ed4-b543-4d0d21e73702.jpeg"
+    }
+  },
+  {
+    "model": "core.galleryimage",
+    "pk": 6,
+    "fields": {
+      "gallery": 1,
+      "image": "gallery_images/WhatsApp_Image_2025-10-20_at_15.16.27.jpeg"
+    }
+  },
+  {
+    "model": "core.mobilebanner",
+    "pk": 9,
+    "fields": { "image": "mobile_banners/image_00aegLT.png" }
+  },
+  {
+    "model": "core.mobilebanner",
+    "pk": 10,
+    "fields": { "image": "mobile_banners/image_3O7yyAy.png" }
+  },
+  {
+    "model": "core.mobilebanner",
+    "pk": 11,
+    "fields": { "image": "mobile_banners/image_zVHzx2x.png" }
+  }
+]
