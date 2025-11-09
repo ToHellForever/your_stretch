@@ -64,7 +64,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
-
+# 
 ROOT_URLCONF = 'your_stretch.urls'
 # 
 TEMPLATES = [
