@@ -5,9 +5,3 @@
 db.sqlite3
 *.sqlite
 *.sqlite3
-*.jpg
-*.mp4
-*.jpg
-*.png
-*.svg
-*.jpeg
