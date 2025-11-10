@@ -30,6 +30,9 @@ jobs:
             # Переходим в директорию проекта
             cd /home/v/your_stretch
 
+            # Указываем полный путь к poetry
+            /home/v/.local/bin/poetry install --no-root 
+            
             # Останавливаем службу приложения  (с sudo и передачей пароля)
             echo "${{ secrets.PASSWORD }}" | sudo -S systemctl stop your_stretch
 
