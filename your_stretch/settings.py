@@ -31,7 +31,7 @@ DEBUG = os.getenv("DEBUG_MODE", "True") == "True"
 
 # НА КАКИХ ХОСТАХ МОЖЕТ РАБОТАТЬ 
 ALLOWED_HOSTS = [
-    "195.80.51.20",
+    "217.25.94.180",
     "localhost",
     "127.0.0.1",
     ]
