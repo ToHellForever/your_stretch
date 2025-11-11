@@ -141,4 +141,8 @@ opacity: 0.5;
   .gallery-swiper-slide {
     margin-top: 0.5rem;
   }
+.swiper-slide-next img,
+.swiper-slide-prev img {
+    margin-left: -17px !important;
+}
 }
