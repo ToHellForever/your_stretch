@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     "твойнатяжной.рф",
+    'xn--80adnkcvcdf6af0n.xn--p1ai',
     ]
 
 # ОТКУДА ПРИНИМАЮТСЯ CSRF ЗАПРОСЫ
@@ -43,6 +44,8 @@ CSRF_TRUSTED_ORIGINS = [
     "https://217.25.94.180",
     "http://твойнатяжной.рф",
     "https://твойнатяжной.рф",
+    'http://xn--80adnkcvcdf6af0n.xn--p1ai',
+    'https://xn--80adnkcvcdf6af0n.xn--p1ai',
 ]
 
 INSTALLED_APPS = [
