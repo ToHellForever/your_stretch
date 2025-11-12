@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DetailView
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django_ratelimit.decorators import ratelimit
@@ -19,6 +19,16 @@ class LandingView(TemplateView):
         context['profiles'] = Profile.objects.all()
         context['galleries'] = Gallery.objects.prefetch_related('images').all()
         return context
+
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = "product_detail.html"
+    context_object_name = 'product'
+
+class ProfileDetailView(DetailView):
+    model = Profile
+    template_name = "profile_detail.html"
+    context_object_name = 'profile'
 
     @method_decorator(csrf_exempt)
     @method_decorator(ratelimit(key='ip', rate='3/m', method='POST', block=True))
