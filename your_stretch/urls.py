@@ -4,13 +4,11 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from debug_toolbar.toolbar import debug_toolbar_urls
 from django.contrib.sitemaps.views import sitemap
-from core.sitemaps import ProductSitemap, ProfileSitemap, StaticViewSitemap
+from core.sitemaps import StaticViewSitemap
 from core.views import (
     LandingView, 
     )
 sitemaps = {
-    'products': ProductSitemap,
-    'profiles': ProfileSitemap,
     'static': StaticViewSitemap,
 }
 urlpatterns = [
