@@ -37,7 +37,7 @@ ALLOWED_HOSTS = [
     "твойнатяжной.рф",
     'xn--80adnkcvcdf6af0n.xn--p1ai',
     ]
-
+# 
 # ОТКУДА ПРИНИМАЮТСЯ CSRF ЗАПРОСЫ
 CSRF_TRUSTED_ORIGINS = [
     "http://31.130.147.118",
