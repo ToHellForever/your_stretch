@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'debug_toolbar',
     'core',
 ]
@@ -150,3 +152,6 @@ MEDIA_ROOT = BASE_DIR / "media"
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
+
+
+SITE_ID = 1
