@@ -31,7 +31,7 @@ DEBUG = os.getenv("DEBUG_MODE", "False") == "True"
 
 # НА КАКИХ ХОСТАХ МОЖЕТ РАБОТАТЬ 
 ALLOWED_HOSTS = [
-    "85.193.85.215",
+    "31.130.147.118",
     "localhost",
     "127.0.0.1",
     "твойнатяжной.рф",
@@ -40,8 +40,8 @@ ALLOWED_HOSTS = [
 
 # ОТКУДА ПРИНИМАЮТСЯ CSRF ЗАПРОСЫ
 CSRF_TRUSTED_ORIGINS = [
-    "http://85.193.85.215",
-    "https://85.193.85.215",
+    "http://31.130.147.118",
+    "https://31.130.147.118",
     "http://твойнатяжной.рф",
     "https://твойнатяжной.рф",
     'http://xn--80adnkcvcdf6af0n.xn--p1ai',
